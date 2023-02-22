@@ -4,7 +4,7 @@ export default {
   type: 'document',
   groups: [
     {
-      name: 'langdingPage',
+      name: 'landingPage',
       title: 'Landing Page',
     },
     {
@@ -30,7 +30,7 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
-      group: "langdingPage",
+      group: "landingPage",
     },
     {
       name: 'title',
@@ -152,6 +152,16 @@ export default {
           lists: [],
         },
       ],
+    },
+    {
+      name: 'homeBanner',
+      title: 'Home Banner',
+      description: 'Home Banner',
+      group: "landingPage",
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
   ],
   preview: {

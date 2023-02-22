@@ -49,10 +49,10 @@ export default function NavBar() {
 console.log(authorData)
   return (
     <header>
-      <motion.div className="px-[160px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-myFont font-semibold bg-myBlack">
+      <motion.div className="px-[160px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-jpFont font-semibold bg-pcBlack">
         <div className="z-20">
           <a href="/" className="flex items-center">
-            <span className="text-2xl self-center font-semibold whitespace-nowrap text-white hover:text-myBlue transition-all ease-in-out duration-100">
+            <span className="text-2xl self-center font-semibold whitespace-nowrap text-white hover:text-pcBlue transition-all ease-in-out duration-100">
             
             {authorData.signature !== null && (
                 <div className="w-[100px] h-auto">
@@ -128,26 +128,32 @@ console.log(authorData)
                 </NavLink>
               </motion.div>
             </motion.div>
-          )}
+          )}mamy
         </AnimatePresence> */}
 
         <AnimateSharedLayout>
           <div className="hidden md:block">
             <NavLink
               to="/Projects"
-              className="p-0 md:p-4 text-white hover:text-myBlue"
-            >
-              Work
-            </NavLink>
-            <NavLink
-              to="/Others"
-              className="p-0 md:p-4 text-white hover:text-myBlue"
+              className="p-0 md:p-4 text-white hover:text-pcBlue"
             >
               Archive
             </NavLink>
             <NavLink
+              to="/Graphics"
+              className="p-0 md:p-4 text-white hover:text-pcBlue"
+            >
+              Graphics
+            </NavLink>
+            {/* <NavLink
+              to="/Others"
+              className="p-0 md:p-4 text-white hover:text-pcBlue"
+            >
+              Others
+            </NavLink> */}
+            <NavLink
               to="/AboutMe"
-              className="p-0 md:p-4 text-white hover:text-myBlue"
+              className="p-0 md:p-4 text-white hover:text-pcBlue"
             >
               About
             </NavLink>

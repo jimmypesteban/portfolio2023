@@ -14,7 +14,7 @@ export default function SinglePost() {
       title,
       _id,
       slug,
-      mainImage{
+      projectBanner{
         asset->{
           _id,
           url
@@ -54,7 +54,7 @@ export default function SinglePost() {
       <h1>SinglePost page!</h1>
       <h1>{singlePostData.title}</h1>
       <h1>{singlePostData.body.name}</h1>
-      <img src={singlePostData.mainImage.asset.url} alt={singlePostData.name} />
+      {/* <img src={singlePostData.projectBanner.asset.url} alt={singlePostData.projectBanner.asset.url} /> */}
       <div className="prose lg:prose-xl list-disc">
         <BlockContent blocks={singlePostData.body} projectId="22zf6zhh" dataset="production" />
       </div>
