@@ -129,6 +129,7 @@ export default function Home() {
             {authorData.homeBanner !== null && (
               <div className="">
                 <img
+                  alt={authorData.homeBanner.asset.url}
                   className="w-full h-[calc(100vh-100px)]"
                   src={authorData.homeBanner.asset.url}
                 />
@@ -153,6 +154,7 @@ export default function Home() {
                 >
                   <div className=" relative">
                     <img
+                      alt={projectData.projectHomeBanner.asset.url}
                       className="w-full object-cover rounded-[8px] mt-8"
                       src={projectData.projectHomeBanner.asset.url}
                     />
