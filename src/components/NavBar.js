@@ -40,34 +40,24 @@ export default function NavBar() {
   }, []);
 
   if (!authorData) {
-    return (
-        null
-    )
+    return null;
   }
 
-
-console.log(authorData)
+  console.log(authorData);
   return (
     <header>
-      <motion.div className="px-[160px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-jpFont font-semibold bg-pcBlack">
+      <motion.div className="px-[320px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-pfFont2 font-semibold bg-pcBlack">
         <div className="z-20">
           <a href="/" className="flex items-center">
             <span className="text-2xl self-center font-semibold whitespace-nowrap text-white hover:text-pcBlue transition-all ease-in-out duration-100">
-            
-            {authorData.signature !== null && (
+              {authorData.signature !== null && (
                 <div className="w-[100px] h-auto">
                   <img className="" src={authorData.signature.asset.url} />
-                   
-                  
                 </div>
               )}
-
             </span>
           </a>
         </div>
-
-
-
 
         {/*<button onClick={handleNavMenuToggle} className="z-20">
           <div className="text-white hover:text-myBlue text-left font-bold block md:hidden transition-all ease-in-out duration-100">
@@ -135,16 +125,18 @@ console.log(authorData)
           <div className="hidden md:block">
             <NavLink
               to="/Projects"
-              className="p-0 md:p-4 text-white hover:text-pcBlue"
+              className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
             >
               Archive
             </NavLink>
+            <span className="whitespace-pre">    </span>
             <NavLink
               to="/Graphics"
-              className="p-0 md:p-4 text-white hover:text-pcBlue"
+              className=" text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
             >
               Graphics
             </NavLink>
+            <span className="whitespace-pre">    </span>
             {/* <NavLink
               to="/Others"
               className="p-0 md:p-4 text-white hover:text-pcBlue"
@@ -153,7 +145,7 @@ console.log(authorData)
             </NavLink> */}
             <NavLink
               to="/AboutMe"
-              className="p-0 md:p-4 text-white hover:text-pcBlue"
+              className=" text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
             >
               About
             </NavLink>

@@ -25,11 +25,13 @@ module.exports = {
         pfFont: ["Lato", "sans-serif"],
         pfFont2: ["Manrope", "sans-serif"],
         pfFont3: ["Poppins", "sans-serif"],
+        pfFont4: ["Lexend", "sans-serif"],
       },
 
       colors: {
         pcBlue: "#2DB4C7",
         pcBlack: "rgba(0, 0, 0, 0.9)",
+        pcBlack2: "#232323",
         pcGray: "rgba(255, 255, 255, 0.8)",
         pcGray2: "rgba(255, 255, 255, 0.6)",
         pcGray3: "rgba(255, 255, 255, 0.9)",

@@ -252,7 +252,7 @@ export default {
       name: "teamMembers",
       title: "Team Members",
       group: "introduction",
-      type: "blockContent",
+      type: "string",
     },
     {
       name: "tools",
@@ -286,6 +286,14 @@ export default {
       of: [{ type: "string" }],
     },
     {
+      name: "processImage",
+      title: "Process Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: "designSystemTitle",
       title: "Design System Title",
       group: "process",
@@ -298,10 +306,32 @@ export default {
       type: "blockContent",
     },
     {
+      name: "designSystem2",
+      title: "Design System 2",
+      group: "designSystem",
+      type: "blockContent",
+    },
+    {
       name: "designSystemGallery",
       title: "Design System Gallery",
       type: "array",
       of: [{ type: "image" }],
+    },
+    {
+      name: "designSystemImage",
+      title: "Design System Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "designSystemImage2",
+      title: "Design System Image 2",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: "gifTitle",
@@ -310,17 +340,28 @@ export default {
       type: "string",
     },
     {
+      name: "gifBlock",
+      title: "Gif Block",
+      type: "blockContent",
+      group: "conclusion",
+    },
+    {
       name: "gifGallery",
       title: "Gif Gallery",
       type: "array",
       of: [{ type: "file" }],
     },
-
     {
-      name: "prototype",
+      name: "prototypeTitle",
       title: "Prototype Title",
       type: "string",
       group: "prototype",
+    },
+    {
+      name: "prototypeBlock",
+      title: "Prototype Block",
+      type: "blockContent",
+      group: "conclusion",
     },
     {
       name: "prototypeVideosUrl",
@@ -330,7 +371,7 @@ export default {
     },
 
     {
-      name: "prototype2",
+      name: "prototypeTitle2",
       title: "Prototype Title 2",
       type: "string",
       group: "prototype",
@@ -353,6 +394,186 @@ export default {
       title: "Results and Takeaways Content",
       type: "blockContent",
       group: "conclusion",
+    },
+    {
+      name: "extraImage1",
+      title: "Extra Image 1",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage2",
+      title: "Extra Image 2",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage3",
+      title: "Extra Image 3",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage4",
+      title: "Extra Image 4",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage5",
+      title: "Extra Image 5",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage6",
+      title: "Extra Image 6",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage7",
+      title: "Extra Image 7",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraImage8",
+      title: "Extra Image 8",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "extraGallery1",
+      title: "Extra Gallery 1",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraGallery2",
+      title: "Extra Gallery 2",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraGallery3",
+      title: "Extra Gallery 3",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraGallery4",
+      title: "Extra Gallery 4",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraGallery5",
+      title: "Extra Gallery 5",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraGallery6",
+      title: "Extra Gallery 6",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraTitle1",
+      title: "Extra Title 1",
+      type: "string",
+    },
+    {
+      name: "extraTitle2",
+      title: "Extra Title 2",
+      type: "string",
+    },
+    {
+      name: "extraTitle3",
+      title: "Extra Title 3",
+      type: "string",
+    },
+    {
+      name: "extraTitle4",
+      title: "Extra Title 4",
+      type: "string",
+    },
+    {
+      name: "extraTitle5",
+      title: "Extra Title 5",
+      type: "string",
+    },
+    {
+      name: "extraTitle6",
+      title: "Extra Title 6",
+      type: "string",
+    },
+    {
+      name: "extraBlock1",
+      title: "Extra Block 1",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock2",
+      title: "Extra Block 2",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock3",
+      title: "Extra Block 3",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock4",
+      title: "Extra Block 4",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock5",
+      title: "Extra Block 5",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock6",
+      title: "Extra Block 6",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock7",
+      title: "Extra Block 7",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock8",
+      title: "Extra Block 8",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock9",
+      title: "Extra Block 9",
+      type: "blockContent",
+    },
+    {
+      name: "extraBlock10",
+      title: "Extra Block 10",
+      type: "blockContent",
     },
   ],
 

@@ -36,7 +36,7 @@ export default function Projects() {
           projectButtonColor,
         }`
       )
-      .then(data => {
+      .then((data) => {
         setProjectData(data);
         console.log("asjkdhkjashkdjhk", projectData);
       })
@@ -71,7 +71,7 @@ export default function Projects() {
           projectButtonColor,
         }`
       )
-      .then(data => {
+      .then((data) => {
         setProjectPersonalData(data);
         console.log("projectPersonalData:", projectPersonalData);
       })
@@ -89,7 +89,8 @@ export default function Projects() {
               ease: "easeIn",
             },
           }}
-          animate={{ y: ["0px", "-200px"] }}>
+          animate={{ y: ["0px", "-200px"] }}
+        >
           <div className="flex h-screen">
             <div className="m-auto">
               <div className="h-10 w-10 rounded-full bg-blue-200 mx-auto"></div>
@@ -103,10 +104,10 @@ export default function Projects() {
   return (
     <main className="bg-pcBlack">
       <section className="mx-[320px]">
-        <h1 className="text-[40px] text-pcBlue font-jpFont2 font-bold text-center mb-2">
+        <h1 className="text-[40px] text-pcBlue font-pfFont2 font-bold text-center mb-2">
           Archive
         </h1>
-        <p className="text-[16px] text-pcWhite font-jpFont2 font-medium text-center mb-10">
+        <p className="text-[16px] text-pcWhite font-pfFont2 font-medium text-center mb-10">
           Here are some more works.
         </p>
 
@@ -125,10 +126,92 @@ export default function Projects() {
                   opacity: 0,
                   duration: 0.5,
                   ease: "easeInOut",
-                }}>
+                }}
+              >
+                <div
+                  className="bg-pcBlack/50 min-h-[480px] rounded-[8px] transition-all duration-300 hover:shadow-[0_0_40px_rgba(236,124,38,1)]"
+                  key={index}
+                >
+                  <div className="text-white">
+                    <div className="w-full">
+                      <div className="">
+                        {project.externalLink !== null && (
+                          <a className="w-full h-full absolute top-0 rounded-[8px] bg-transparent opacity-0 hover:opacity-100 hover:bg-pcBlack/80 transition-all duration-300 flex justify-center items-center text-pcWhite font-pfFont font-black text-[28px]"
+                            href={project.externalLink}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            View in Behance
+                          </a>
+                        )}
+                        {project.liveSite !== null && (
+                          <Link className="w-full h-full absolute top-0 rounded-[8px] bg-transparent opacity-0 hover:opacity-100 hover:bg-pcBlack/80 transition-all duration-300 flex justify-center items-center text-pcWhite font-pfFont font-black text-[28px]"
+                            to={"/projects/" + project.slug.current}
+                            key={project.slug.current}
+                          >
+                            View Case Study
+                          </Link>
+                        )}
+                      </div>
+                      <img
+                        className="rounded-t-[8px]"
+                        src={project.projectBanner.asset.url}
+                        alt={project.projectBanner.alt}
+                      />
+                      <div className="p-6">
+                      <div className="text-[16px] font-semibold">
+                        {project.duration}
+                      </div>
+                      <div className="text-[24px] font-bold pfFont truncate">
+                        {project.title}
+                      </div>
+                      <div className="text-[16px] font-semibold mb-2">
+                        {project.role}
+                      </div>
+                      <div className="flex flex-wrap mb-3">
+                        {project.projectTags &&
+                          project.projectTags.map((projectTags, id) => (
+                            <div
+                              className=" text-[14px] text-pcBlack bg-white font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                              key={id}
+                            >
+                              {projectTags}
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+        </div>
+
+        <h1 className="text-[40px] text-pcBlue font-pfFont2 font-bold text-center mt-16 mb-2">
+          Personal / Course Projects
+        </h1>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 pt-8">
+          {projectPersonalData &&
+            projectPersonalData.map((project, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1,
+                }}
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1, duration: 0.5, ease: "easeInOut" }}
+                exit={{
+                  x: "-100%",
+                  opacity: 0,
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+              >
                 <div
                   className="bg-pcBlack/50 min-h-[480px] rounded-[8px] hover:shadow-[0_0_40px_rgba(236,124,38,1)]"
-                  key={index}>
+                  key={index}
+                >
                   <div className="text-white">
                     <div className="w-full relative">
                       <div className="w-full h-full absolute top-0 rounded-t-[8px] bg-transparent opacity-0 hover:opacity-100 hover:bg-pcBlack/80 transition-all duration-300 flex justify-center items-center text-pcWhite font-pfFont font-bold text-[24px]">
@@ -137,7 +220,8 @@ export default function Projects() {
                             <a
                               href={project.externalLink}
                               target="_blank"
-                              rel="noreferrer">
+                              rel="noreferrer"
+                            >
                               View in Behance
                             </a>
                           </p>
@@ -146,7 +230,8 @@ export default function Projects() {
                           <p className="">
                             <Link
                               to={"/projects/" + project.slug.current}
-                              key={project.slug.current}>
+                              key={project.slug.current}
+                            >
                               View Case Study
                             </Link>
                           </p>
@@ -162,7 +247,7 @@ export default function Projects() {
                       <div className="text-[16px] font-semibold">
                         {project.duration}
                       </div>
-                      <div className="text-[24px] font-bold jpFont truncate">
+                      <div className="text-[24px] font-bold pfFont truncate">
                         {project.title}
                       </div>
                       <div className="text-[16px] font-semibold mb-2">
@@ -173,7 +258,8 @@ export default function Projects() {
                           project.projectTags.map((projectTags, id) => (
                             <div
                               className=" text-[14px] text-pcBlack bg-white font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
-                              key={id}>
+                              key={id}
+                            >
                               {projectTags}
                             </div>
                           ))}
@@ -183,18 +269,6 @@ export default function Projects() {
                 </div>
               </motion.div>
             ))}
-        </div>
-
-        <h1 className="text-[40px] text-pcBlue font-jpFont2 font-bold text-center mb-10">
-          Personal Projects
-        </h1>
-        <div>
-          <p>
-            {projectPersonalData &&
-              projectPersonalData.map((project, index) => (
-                <div>{project.title}</div>
-              ))}
-          </p>
         </div>
       </section>
     </main>

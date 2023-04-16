@@ -32,37 +32,37 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-pcBlack text-center pb-12">
+    <footer className="bg-pcBlack text-center pb-12 pt-16">
       <p className="text-pcWhite text-[20px] font-light text-center mb-4">
         You can find also me on{" "}
         <a
-          className="font-semibold hover:text-pcBlue"
+          className="font-medium text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
           href="https://dribbble.com/jpesteban2"
         >
           Dribbble </a>
         - {" "}
         <a
-          className="font-semibold hover:text-pcBlue"
+          className="font-medium text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
           href="https://www.linkedin.com/in/jpesteban2/"
         >
           LinkedIn </a>
         - {" "}
         <a
-          className="font-semibold hover:text-pcBlue"
+          className="font-medium text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
           href="https://www.instagram.com/jpesteban_2/"
         >
           Instagram
         </a>
         <br></br> or directly reach out at{" "}
         <a
-          className="font-semibold hover:text-pcBlue"
+          className="font-medium text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
           href="mailto:jimmypesteban@gmail.com"
         >
           {authorData.email}{" "}
         </a>{" "}
         or{" "}
         <a
-          className="font-semibold hover:text-pcBlue"
+          className="font-medium text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
           href="https://api.whatsapp.com/send?phone=+85295322433"
         >
           +852 9532 2433

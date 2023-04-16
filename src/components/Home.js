@@ -54,6 +54,7 @@ export default function Home() {
             },
             alt 
           },
+          
           publishedAt,
           projectTags
         }`
@@ -82,6 +83,18 @@ export default function Home() {
                   url
                 },
                 alt 
+              },
+              resume{
+                asset->{
+                  _id,
+                  url
+                }
+              },
+              recommendationLetter{
+                asset->{
+                  _id,
+                  url
+                }
               },
         }`
       )
@@ -117,14 +130,31 @@ export default function Home() {
   return (
     <>
       <div className="bg-pcBlack">
-        <div className="text-[72px] font-bold text-jpFont text-pcWhite">
-          <div className="relative w-full  h-[calc(100vh-100px)] ">
-            <div className="absolute tap-[25%] left-0 mix-blend-difference">
-              Hello! I'm {authorData.name} - a UI/UX Designer.
-              <p>
-                Worked in startup industries such as Fintech, IT Consultancy and
-                Multimedia companies.
+        <div className="font-pfFont2 text-pcWhite">
+          <div className="relative w-full h-[calc(100vh-100px)]">
+            <div className="absolute w-full top-[35%] mix-blend-difference text-[56px] font-bold text-center">
+              Hello I'm {authorData.name}, a UI/UX Designer
+              <p className="text-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
+                Worked in startup industries such as <br></br> <strong>Fintech</strong>, <strong>IT Consultancy</strong> and <strong>Multimedia</strong> companies.
               </p>
+              <div>
+                <p className="text-[20px] font-pfFont">
+                  {authorData.resume !== null && (
+                    <a
+                      className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
+                      href={`${authorData.resume.asset.url}?dl=`}
+                    >Résumé
+                    </a>
+                  )}<span className="whitespace-pre font-pfFont2 font-semi-bold">  /  </span>
+                  {authorData.resume !== null && (
+                    <a
+                      className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
+                      href={`${authorData.recommendationLetter.asset.url}?dl=`}
+                    >Recommendation Letter
+                    </a>
+                  )}
+                  </p>
+              </div>
             </div>
             {authorData.homeBanner !== null && (
               <div className="">
@@ -140,9 +170,11 @@ export default function Home() {
       </div>
 
       <div className="bg-pcBlack pt-12">
-        <div className="lg:columns-2 sm:columns-1 gap-10 mx-[320px] ">
+        <div className="lg:columns-2 sm:columns-1 gap-10 mx-[320px]">
           <div className="flex flex-wrap justify-center items-center min-h-[320px] bg-pcBlack/50 mb-10">
-            <div className="inline-flex text-[40px] font-bold text-pcBlue font-pcFont2 text-center">Selected Works</div>
+            <div className="inline-flex text-[40px] font-bold text-pcBlue font-pfFont2 text-center">
+              Selected Works
+            </div>
           </div>
 
           <div className="">
@@ -168,7 +200,7 @@ export default function Home() {
                         {projectData.duration}
                       </p>
                       <h1
-                        className="font-bold text-[36px]"
+                        className="font-extrabold text-[36px] font-pfFont2"
                         style={{ color: `${projectData.projectTitleColor}` }}
                       >
                         {projectData.title}
@@ -182,7 +214,7 @@ export default function Home() {
                           projectData.projectTags.map((projectTags, id) => (
                             <div
                               // className=" text-[14px] text-pcBlack bg-pcBlack/20 font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
-                              className="text-[14px] text-pcBlack font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                              className="text-[14px] text-pcBlack font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2  "
                               style={{
                                 backgroundColor: `${projectData.projectTagsColor}`,
                               }}
@@ -215,7 +247,11 @@ export default function Home() {
                         </button>
                       )}
                       {projectData.liveSite !== null && (
-                        <button className="bg-blue-500 hover:bg-blue-700 text-pcWhite font-jpFont font-bold py-2 px-4 rounded-full">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
+                        style={{
+                          backgroundColor: `${projectData.projectButtonColor}`,
+                        }}
+                        >
                           <Link
                             to={"/projects/" + projectData.slug.current}
                             key={projectData.slug.current}
@@ -233,9 +269,9 @@ export default function Home() {
       </div>
 
       <div className="pt-[80px] pb-[80px] bg-pcBlack text-center">
-        <button className="h-[72px] w-[160px] border border-pcWhite hover:bg-pcWhite hover:text-pcBlack text-pcWhite font-jpFont font-bold py-2 px-4 rounded-full ">
+        <button className="h-[72px] w-[160px] border border-pcWhite hover:bg-pcWhite hover:text-pcBlack text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full ">
           <Link to="/Projects" className="p-0 md:p-4">
-            More Work
+            More Works
           </Link>
         </button>
       </div>
