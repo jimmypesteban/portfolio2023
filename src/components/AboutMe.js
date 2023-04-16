@@ -58,7 +58,7 @@ export default function AboutMe() {
     <>
       <div className="px-10 lg:px-[160px] md:px-[24px] sm:px-[24px]  bg-pcBlack flex flex-wrap justify-between items-center mx-auto py-8 font-pfFont">
         <div className="lg:px-[160px] md:px-[24px] sm:px-[24px] mt-16 mx-auto">
-          <p className="text-pcWhite text-[20px] font-light text-center mb-4">
+          <div className="text-pcWhite text-[20px] font-light text-center mb-4">
             {authorData.bio !== null && (
               <BlockContent
                 className=""
@@ -67,9 +67,9 @@ export default function AboutMe() {
                 dataset="production"
               />
             )}
-          </p>
+          </div>
           <br></br>
-          <p className="text-[24px] mb-8 text-center font-medium text-pcGray3 font-pfFont">
+          <div className="text-[24px] mb-8 text-center font-medium text-pcGray3 font-pfFont">
             <p className="text-[20px] font-pfFont">
                   {authorData.resume !== null && (
                     <a
@@ -86,7 +86,7 @@ export default function AboutMe() {
                     </a>
                   )}
                   </p>
-          </p>
+          </div>
           {/* <p className="text-pcWhite text-[20px] font-light text-center mb-4">
             You can find me on <a className="font-semibold hover:text-pcBlue" href="https://dribbble.com/jpesteban2">Dribbble</a>, <a className="font-semibold hover:text-pcBlue" href="https://www.linkedin.com/in/jpesteban2/">LinkedIn</a>,{" "}
             <a className="font-semibold hover:text-pcBlue" href="https://www.instagram.com/jpesteban_2/">Instagram</a>,<br></br> or directly reach out at   

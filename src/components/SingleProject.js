@@ -302,13 +302,13 @@ export default function SingleProject() {
         <div className="mt-12 mb-12 p-16 bg-pcBlack rounded-[8px]">
           <div className="text-pcWhite">
             <p className="mb-2 font-bold text-[12px] font-pfFont2">OVERVIEW</p>
-            <p className="font-pfFont text-[18px]">
+            <div className="font-pfFont text-[18px]">
               <BlockContent
                 blocks={singleProjectData.overview}
                 projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                 dataset="production"
               />
-            </p>
+            </div>
             <div className="grid grid-cols-4 gap-16 mt-6">
               <div>
                 <p className="mb-2 font-bold text-[12px] font-pfFont2">
@@ -455,7 +455,7 @@ export default function SingleProject() {
                 />
               </div>
               <iframe
-                class="w-full aspect-video"
+                className="w-full aspect-video"
                 src={singleProjectData.processContent}
               ></iframe>
             </div>
@@ -509,11 +509,11 @@ export default function SingleProject() {
               </h1>
               <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-8">
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.prototypeVideosUrl}
                 ></iframe>
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.prototypeVideosUrl2}
                 ></iframe>
               </div>
@@ -834,13 +834,13 @@ export default function SingleProject() {
                 <p className="mb-2 font-bold text-[12px] font-pfFont2">
                   OVERVIEW
                 </p>
-                <p className="font-pfFont text-[18px]">
+                <div className="font-pfFont text-[18px]">
                   <BlockContent
                     blocks={singleProjectData.overview}
                     projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                     dataset="production"
                   />
-                </p>
+                </div>
               </div>
             </div>
             <div className="flex flex-col mt-12 p-16 bg-pcBlack rounded-[8px]">
@@ -1097,7 +1097,7 @@ export default function SingleProject() {
                   {singleProjectData.prototypeTitle}
                 </h1>
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.prototypeVideosUrl}
                 ></iframe>
               </div>
@@ -1259,13 +1259,13 @@ export default function SingleProject() {
               </h1>
               <div className="mb-6">
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.prototypeVideosUrl}
                 ></iframe>
               </div>
               <div>
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.prototypeVideosUrl2}
                 ></iframe>
               </div>
@@ -1878,7 +1878,7 @@ export default function SingleProject() {
 
               <div className="mt-4">
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.extraTitle4}
                 ></iframe>
               </div>
@@ -1920,7 +1920,7 @@ export default function SingleProject() {
 
               <div className="mt-4">
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.extraTitle5}
                 ></iframe>
               </div>
@@ -2058,7 +2058,7 @@ export default function SingleProject() {
 
               <div className="mt-4">
                 <iframe
-                  class="w-full aspect-video"
+                  className="w-full aspect-video"
                   src={singleProjectData.extraTitle3}
                 ></iframe>
               </div>
@@ -2107,7 +2107,7 @@ export default function SingleProject() {
               </div>
 
               <iframe
-                class="w-full aspect-video mt-4"
+                className="w-full aspect-video mt-4"
                 src={singleProjectData.extraTitle1}
               ></iframe>
               

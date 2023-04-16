@@ -127,15 +127,15 @@ export default function NavBar() {
               to="/Projects"
               className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
             >
-              Archive
+              Project Archives
             </NavLink>
-            <span className="whitespace-pre">    </span>
+            {/* <span className="whitespace-pre">    </span>
             <NavLink
               to="/Graphics"
               className=" text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
             >
               Graphics
-            </NavLink>
+            </NavLink> */}
             <span className="whitespace-pre">    </span>
             {/* <NavLink
               to="/Others"
@@ -147,7 +147,7 @@ export default function NavBar() {
               to="/AboutMe"
               className=" text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
             >
-              About
+              About Me
             </NavLink>
           </div>
         </AnimateSharedLayout>
