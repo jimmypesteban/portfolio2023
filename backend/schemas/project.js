@@ -155,6 +155,18 @@ export default {
     },
 
     {
+      name: "extraColor1",
+      title: "Extra Color 1",
+      type: "string",
+    },
+
+    {
+      name: "extraColor2",
+      title: "Extra Color 2",
+      type: "string",
+    },
+
+    {
       name: "slug",
       title: "slug",
       type: "slug",

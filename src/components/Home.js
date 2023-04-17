@@ -8,6 +8,16 @@ export default function Home() {
   const [projectData, setProjectData] = useState("Homepage");
   const [loading, setLoading] = useState(true);
 
+  const [isHover, setIsHover] = useState(false);
+
+   const handleMouseEnter = (index) => {
+      setIsHover(true);
+      console.log("sadasdasdgsdkl", projectData?.length);
+   };
+   const handleMouseLeave = () => {
+      setIsHover(false);
+   };
+
   useEffect(() => {
     console.log("called!");
 
@@ -104,22 +114,23 @@ export default function Home() {
 
   if (!authorData || loading === true) {
     return (
-      <div className="w-full h-max align-middle">
+      <div className="w-full h-screen fixed align-middle z-30">
         <motion.div
-          transition={{
-            y: {
-              duration: 1,
-              yoyo: Infinity,
-              ease: "easeIn",
+          className="w-full h-screen absolute bg-black"
+          initial={{ scaleY: 1.5, y: "100vh", opacity: 1 }}
+          animate={{
+            scaleY: 1.5,
+            y: ["100vh", "0vh", "0vh", "0vh"],
+            opacity: [1, 1, 1, 1, 0],
+            transition: {
+              duration: 2,
+              ease: "easeInOut",
+              times: [0, 0.5, 0.3, 1.2],
             },
-          }}
-          animate={{ y: ["0px", "-200px"] }}
-        >
-          <div className="flex h-screen">
-            <div className="m-auto">
-              <div className="h-10 w-10 rounded-full bg-red-200 mx-auto"></div>
-            </div>
-          </div>
+          }}>
+          <h1 className="text-pcWhite absolute w-full h-full flex items-center justify-center top-[-80px] font-DMSerifDisplay text-[32px] lg:text-[40px] font-bold">
+            Home
+          </h1>
         </motion.div>
       </div>
     );
@@ -172,7 +183,7 @@ export default function Home() {
       <div className="bg-pcBlack pt-12 lg:px-[320px] px-[16px]">
         <div className="lg:columns-2 sm:columns-1 gap-10">
           <div className="flex flex-wrap justify-center items-center min-h-[320px] bg-pcBlack/50 mb-10">
-            <div className="inline-flex lg:text-[40px] text-[28px] font-bold text-pcBlue font-pfFont2 text-center">
+            <div className="inline-flex lg:text-[40px] text-[28px] font-bold text-pcWhite font-pfFont2 text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               Selected Works
             </div>
           </div>
@@ -213,7 +224,6 @@ export default function Home() {
                         {projectData.projectTags &&
                           projectData.projectTags.map((projectTags, id) => (
                             <div
-                              // className=" text-[14px] text-pcBlack bg-pcBlack/20 font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
                               className="md:text-[14px] text-[12px] text-pcBlack font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2  "
                               style={{
                                 backgroundColor: `${projectData.projectTagsColor}`,
@@ -233,8 +243,11 @@ export default function Home() {
                         <button
                           className="hover:bg-green-700 text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
                           style={{
-                            backgroundColor: `${projectData.projectButtonColor}`,
+                            backgroundColor: isHover ? `${projectData.projectTagsColor}` : `${projectData.projectButtonColor}`,
+
                           }}
+                          onMouseEnter={() => setIsHover(true)}
+                          onMouseLeave={() => setIsHover(false)}
                         >
                           <a
                             className="text-pcBlack"
@@ -242,21 +255,24 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            View in Behance
+                            View in Behance {projectData.length}
                           </a>
                         </button>
                       )}
                       {projectData.liveSite !== null && (
                         <button className="bg-blue-500 hover:bg-blue-700 text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
                         style={{
-                          backgroundColor: `${projectData.projectButtonColor}`,
+                          
+                          backgroundColor: isHover ? `${projectData.projectTagsColor}` : `${projectData.projectButtonColor}`,
                         }}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
                         >
                           <Link
                             to={"/projects/" + projectData.slug.current}
                             key={projectData.slug.current}
                           >
-                            View Case Study
+                            View Case Study {index}
                           </Link>
                         </button>
                       )}

@@ -34,6 +34,8 @@ export default function Projects() {
           projectTitleColor,
           projectTagsColor,
           projectButtonColor,
+          extraColor1,
+          extraColor2,
         }`
       )
       .then((data) => {

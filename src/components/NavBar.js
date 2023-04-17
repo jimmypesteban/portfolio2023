@@ -13,7 +13,13 @@ export default function NavBar() {
     setOpen(false);
   }, [pathname]);
 
-  useEffect(() => {}, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
 
   const handleNavMenuToggle = () => {
     setOpen(!isOpen);
@@ -46,10 +52,10 @@ export default function NavBar() {
   console.log(authorData);
   return (
     <header>
-      <motion.div className="px-[320px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-pfFont2 font-semibold bg-pcBlack">
+      <motion.div className="md:px-[320px] px-[24px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-pfFont2 font-semibold bg-pcBlack">
         <div className="z-20">
           <a href="/" className="flex items-center">
-            <span className="text-2xl self-center font-semibold whitespace-nowrap text-white hover:text-pcBlue transition-all ease-in-out duration-100">
+            <span className="text-2xl self-center font-semibold whitespace-nowrap text-pcWhite hover:text-pcWhite transition-all ease-in-out duration-100">
               {authorData.signature !== null && (
                 <div className="w-[100px] h-auto">
                   <img className="" src={authorData.signature.asset.url} />
@@ -59,21 +65,21 @@ export default function NavBar() {
           </a>
         </div>
 
-        {/*<button onClick={handleNavMenuToggle} className="z-20">
-          <div className="text-white hover:text-myBlue text-left font-bold block md:hidden transition-all ease-in-out duration-100">
+        <button onClick={handleNavMenuToggle} className="z-20">
+          <div className="text-pcWhite hover:text-myBlue text-left font-bold block md:hidden transition-all ease-in-out duration-100">
             {isOpen ? "Close" : "Menu"}
           </div>
-        </button>*/}
+        </button>
 
         {/* Mobile Menu */}
-        {/* <AnimatePresence>
+        <AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ x: "-100vw", borderRadius: 0, width: "150vw" }}
               animate={{
                 x: 0,
                 width: "100vw",
-                borderRadius: ["0", "20%", "20%", "0"],
+                borderRadius: ["0", "0", "0", "0"],
                 transition: { ease: "linear", duration: 0.3 },
               }}
               exit={{
@@ -81,48 +87,50 @@ export default function NavBar() {
                 borderRadius: 0,
                 transition: { ease: "linear", duration: 0.3 },
               }}
-              className="absolute w-full bg-black-v1 right-0 h-screen top-0 block md:hidden z-10">
+              className="absolute w-full bg-pcBlack right-0 h-screen top-0 block md:hidden z-10"
+            >
               <motion.div
-                initial={{ y: 100, scale: 0, x: -100 }}
+                initial={{ y: 0, scale: 0, x: -100 }}
                 animate={{
                   y: 0,
                   scale: 1,
                   x: [-400, 0],
                   transition: { duration: 0.5 },
                 }}
-                className="absolute bottom-0 left-0 text-white mt-[50px] px-8 mb-[100px] flex flex-col">
+                className="absolute inset-0 text-pcWhite flex flex-col justify-center items-center"
+              >
                 <NavLink
                   to="/"
-                  className="text-left font-bold text-[54px] hover:text-gold">
+                  className="font-semibold text-[36px] text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[24px] after:absolute after:duration-300 hover:after:w-full"
+                >
                   Home
                 </NavLink>
                 <NavLink
-                  to="/About"
-                  className="text-left font-bold text-[54px] hover:text-gold">
-                  ABOUT ME
-                </NavLink>
-                <NavLink
                   to="/Projects"
-                  className="text-left font-bold text-[54px] hover:text-gold">
-                  PROJECTS
+                  className="my-4 font-semibold text-[36px] text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[24px] after:absolute after:duration-300 hover:after:w-full"
+                >
+                  Project Archive
                 </NavLink>
                 <NavLink
-                  to="/Post"
-                  className="text-left font-bold text-[54px] hover:text-gold">
-                  POST
-                </NavLink>
-                <NavLink
-                  to="/Contact"
-                  className="text-left font-bold text-[54px] hover:text-gold">
-                  CONTACT
+                  to="/AboutMe"
+                  className="font-semibold text-[36px] text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[24px] after:absolute after:duration-300 hover:after:w-full"
+                >
+                  About Me
                 </NavLink>
               </motion.div>
             </motion.div>
-          )}mamy
-        </AnimatePresence> */}
+          )}
+        </AnimatePresence>
 
         <AnimateSharedLayout>
           <div className="hidden md:block">
+          <NavLink
+              to="/"
+              className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
+            >
+              Home
+            </NavLink>
+            <span className="whitespace-pre">        </span>
             <NavLink
               to="/Projects"
               className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
@@ -136,7 +144,7 @@ export default function NavBar() {
             >
               Graphics
             </NavLink> */}
-            <span className="whitespace-pre">    </span>
+            <span className="whitespace-pre">        </span>
             {/* <NavLink
               to="/Others"
               className="p-0 md:p-4 text-white hover:text-pcBlue"
