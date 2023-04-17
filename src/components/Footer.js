@@ -32,8 +32,8 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-pcBlack text-center pb-12 pt-16">
-      <p className="text-pcWhite text-[20px] font-light text-center mb-4">
+    <footer className="bg-pcBlack text-center pb-12 md:pt-16 lg:px-[320px] px-[16px]">
+      <p className="text-pcWhite md:text-[20px] text-[16px] font-light text-center mb-4">
         You can find also me on{" "}
         <a
           className="font-medium text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"

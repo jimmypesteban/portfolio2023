@@ -117,7 +117,7 @@ export default function Home() {
         >
           <div className="flex h-screen">
             <div className="m-auto">
-              <div className="h-10 w-10 rounded-full bg-blue-200 mx-auto"></div>
+              <div className="h-10 w-10 rounded-full bg-red-200 mx-auto"></div>
             </div>
           </div>
         </motion.div>
@@ -132,9 +132,9 @@ export default function Home() {
       <div className="bg-pcBlack">
         <div className="font-pfFont2 text-pcWhite">
           <div className="relative w-full h-[calc(100vh-100px)]">
-            <div className="absolute w-full top-[35%] mix-blend-difference text-[56px] font-bold text-center">
+            <div className="absolute w-full top-[35%] mix-blend-difference md:text-[56px] text-[32px] font-bold text-center">
               Hello I'm {authorData.name}, a UI/UX Designer
-              <p className="text-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
+              <p className="md:text-[24px] text-[20px] px-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
                 Worked in startup industries such as <br></br> <strong>Fintech</strong>, <strong>IT Consultancy</strong> and <strong>Multimedia</strong> companies.
               </p>
               <div>
@@ -169,10 +169,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-pcBlack pt-12">
-        <div className="lg:columns-2 sm:columns-1 gap-10 mx-[320px]">
+      <div className="bg-pcBlack pt-12 lg:px-[320px] px-[16px]">
+        <div className="lg:columns-2 sm:columns-1 gap-10">
           <div className="flex flex-wrap justify-center items-center min-h-[320px] bg-pcBlack/50 mb-10">
-            <div className="inline-flex text-[40px] font-bold text-pcBlue font-pfFont2 text-center">
+            <div className="inline-flex lg:text-[40px] text-[28px] font-bold text-pcBlue font-pfFont2 text-center">
               Selected Works
             </div>
           </div>
@@ -181,16 +181,16 @@ export default function Home() {
             {projectData &&
               projectData.map((projectData, index) => (
                 <div
-                  className="min-h-[640px] w-full bg-white rounded-[16px] mb-10"
+                  className="md:min-h-[640px] w-full bg-white rounded-[16px] "
                   key={index}
                 >
-                  <div className=" relative">
+                  <div className="relative">
                     <img
                       alt={projectData.projectHomeBanner.asset.url}
                       className="w-full object-cover rounded-[8px] mt-8"
                       src={projectData.projectHomeBanner.asset.url}
                     />
-                    <div className="absolute top-0 w-full min-h-[640px] p-12 rounded-[8px]">
+                    <div className="absolute top-0 w-full md:min-h-[640px] p-12 rounded-[8px]">
                       {/* <img
                     className="w-[40px]"
                     src={projectData.projectLogo.asset.url}
@@ -200,7 +200,7 @@ export default function Home() {
                         {projectData.duration}
                       </p>
                       <h1
-                        className="font-extrabold text-[36px] font-pfFont2"
+                        className="font-extrabold md:text-[36px] text-[28px] font-pfFont2"
                         style={{ color: `${projectData.projectTitleColor}` }}
                       >
                         {projectData.title}
@@ -214,7 +214,7 @@ export default function Home() {
                           projectData.projectTags.map((projectTags, id) => (
                             <div
                               // className=" text-[14px] text-pcBlack bg-pcBlack/20 font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
-                              className="text-[14px] text-pcBlack font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2  "
+                              className="md:text-[14px] text-[12px] text-pcBlack font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2  "
                               style={{
                                 backgroundColor: `${projectData.projectTagsColor}`,
                               }}
