@@ -48,6 +48,8 @@ export default function SingleProject() {
       projectTitleColor,
       projectTagsColor,
       projectButtonColor,
+      extraColor1,
+      extraColor2,
       role,
       duration,
       responsibilites,
@@ -349,7 +351,7 @@ export default function SingleProject() {
           <div>
             <div className="mt-6 md:mt-12 mb-6 md:mb-12 p-8 md:p-16 bg-pcBlack rounded-[8px]">
               <h1 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
-              style={{ color: `${singleProjectData.projectTitleColor}`}}>
+              style={{ color: `${singleProjectData.extraColor1}`}}>
                 The Goal
               </h1>
               <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite">
@@ -364,10 +366,10 @@ export default function SingleProject() {
 
             <div className="mt-6 md:mt-12 mb-6 md:mb-12 p-8 md:p-16 bg-pcBlack rounded-[8px]">
               <h1 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
-              style={{ color: `${singleProjectData.projectTitleColor}`}}>
+              style={{ color: `${singleProjectData.extraColor1}`}}>
                 {singleProjectData.processTitle}
               </h1>
-              <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+              <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite mb-4">
                 <BlockContent
                   className=""
                   blocks={singleProjectData.process}
@@ -390,11 +392,28 @@ export default function SingleProject() {
                       )
                     )}
                 </div>
+
+                <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite mb-4">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock1}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+
+                <div>
+                <img
+                  className=""
+                  src={singleProjectData.extraImage1.asset.url}
+                  alt={singleProjectData.name}
+                />
+              </div>
             </div>
 
             <div className="mt-6 md:mt-12 mb-6 md:mb-12 p-8 md:p-16 bg-pcBlack rounded-[8px]">
               <h1 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
-              style={{ color: `${singleProjectData.projectTitleColor}`}}>
+              style={{ color: `${singleProjectData.extraColor1}`}}>
                 {singleProjectData.designSystemTitle}
               </h1>
               <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite">
@@ -407,9 +426,24 @@ export default function SingleProject() {
               </div>
             </div>
 
+            <div className="mt-6 md:mt-12 mb-6 md:mb-12 p-8 md:p-16 bg-pcBlack rounded-[8px]">
+              <h1 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
+              style={{ color: `${singleProjectData.extraColor1}`}}>
+                {singleProjectData.gifTitle}
+              </h1>
+              <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.gifBlock}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+            </div>
+
             <div className="mt-6 md:mt-12 p-8 md:p-16 bg-pcBlack rounded-[8px]">
               <h1 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
-              style={{ color: `${singleProjectData.projectTitleColor}`}}>
+              style={{ color: `${singleProjectData.extraColor1}`}}>
                 {singleProjectData.result}
               </h1>
               <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite">

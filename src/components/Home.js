@@ -115,7 +115,7 @@ export default function Home() {
   if (!authorData || loading === true) {
     return (
       <div className="w-full h-screen fixed align-middle z-30">
-        <motion.div
+        {/* <motion.div
           className="w-full h-screen absolute bg-black"
           initial={{ scaleY: 1.5, y: "100vh", opacity: 1 }}
           animate={{
@@ -131,7 +131,7 @@ export default function Home() {
           <h1 className="text-pcWhite absolute w-full h-full flex items-center justify-center top-[-80px] font-DMSerifDisplay text-[32px] lg:text-[40px] font-bold">
             Home
           </h1>
-        </motion.div>
+        </motion.div> */}
       </div>
     );
   }
