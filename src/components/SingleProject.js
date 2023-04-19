@@ -424,6 +424,14 @@ export default function SingleProject() {
                   dataset="production"
                 />
               </div>
+
+              <div>
+                <img
+                  className="mt-4"
+                  src={singleProjectData.designSystemImage.asset.url}
+                  alt={singleProjectData.name}
+                />
+              </div>
             </div>
 
             <div className="mt-6 md:mt-12 mb-6 md:mb-12 p-8 md:p-16 bg-pcBlack rounded-[8px]">
