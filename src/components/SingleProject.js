@@ -322,18 +322,11 @@ export default function SingleProject() {
       <div className="px-[24px] lg:px-[240px] md:px-[24px]  bg-pcBlack  text-pfFont">
         {/* <motion.div style={{ scaleX: scrollYProgress }} />   */}
 
-        <h1 className="text-pcWhite">SingleProject page!</h1>
-        <h1 className="text-pcWhite">{singleProjectData.categories}</h1>
-
-        <h1 className="text-pcWhite text-2xl font-bold">
-          This is the image gallery
-        </h1>
-
-        <h1 className="text-pcWhite text-2xl font-bold">
+        {/* <h1 className="text-pcWhite text-2xl font-bold">
           This is layout {singleProjectData.layout}
-        </h1>
+        </h1> */}
 
-        <h1 className="flex justify-center items-center text-pcWhite font-pfFont2 font-bold lg:text-[40px] text-[28px] mt-16 mb-4"
+        <h1 className="flex justify-center items-center text-pcWhite font-pfFont2 font-bold lg:text-[40px] text-[28px] pt-6 md:pt-10 lg:pt-16 mb-4"
           style={{ color: `${singleProjectData.projectTitleColor}`}}>
           {singleProjectData.title}
         </h1>
@@ -1432,7 +1425,7 @@ export default function SingleProject() {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6  mt-4">
                   {singleProjectData.processContent &&
                     singleProjectData.processContent.map(
                       (processContent, id) => (
@@ -1446,7 +1439,7 @@ export default function SingleProject() {
                     )}
                 </div>
 
-                <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+                <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite mt-4">
                   <BlockContent
                     className=""
                     blocks={singleProjectData.extraBlock1}
@@ -1537,7 +1530,7 @@ export default function SingleProject() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-pcWhite">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 text-pcWhite mt-4">
                 <div className="prose max-w-none prose-strong:text-green-300 prose-strong:font-pfFont2 font-pfFont text-pcWhite font-semibold p-6 rounded-[8px] bg-pcWhite/10">
                   <BlockContent
                     className=""
@@ -1614,7 +1607,7 @@ export default function SingleProject() {
               style={{ color: `${singleProjectData.projectTitleColor}`}}>
                 {singleProjectData.extraTitle3}
               </h1>
-              <div className="grid grid-cols-4 gap-4 md:gap-8">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery3.map(
                     (graphicsgallery, index) => (

@@ -101,7 +101,7 @@ export default function AboutMe() {
             y="50%"
             style={{ fill: "url(#pattern)" }}
           >
-            jpesteban
+            About Me
           </text>
         </motion.svg>
       </motion.div>
@@ -150,14 +150,14 @@ export default function AboutMe() {
           </p> */}
         </div>
 
-        <div className="w-full px-16 lg:px-[160px] md:px-[24px] sm:px-[24px]  mt-8">
-          <div className="text-[40px] mb-4 font-bold text-pcBlue font-pfFont2">
+        <div className="w-full lg:px-[160px] md:px-[24px] sm:px-[24px]  mt-8">
+          <div className="text-[28px] md:text-[40px] mb-4 font-bold text-pcWhite font-pfFont2">
             Skills
           </div>
         </div>
 
-        <div className="w-full px-16 lg:px-[160px] md:px-[24px] sm:px-[24px] mt-8">
-          <div className="text-[40px] mb-4 font-bold text-pcBlue font-pfFont2">
+        <div className="w-full lg:px-[160px] md:px-[24px] sm:px-[24px] mt-8">
+          <div className="text-[28px] md:text-[40px] mb-4 font-bold text-pcWhite font-pfFont2">
             Experience
           </div>
 
@@ -191,8 +191,8 @@ export default function AboutMe() {
           </ol>
         </div>
 
-        <div className="w-full px-16 lg:px-[160px] md:px-[24px] sm:px-[24px]  mt-8 mx-auto">
-          <div className="text-[40px] mb-4 font-bold text-pcBlue font-pfFont2">
+        <div className="w-full lg:px-[160px] md:px-[24px] sm:px-[24px]  mt-8 mx-auto">
+          <div className="text-[28px] md:text-[40px] mb-4 font-bold text-pcWhite font-pfFont2">
             Education
           </div>
 

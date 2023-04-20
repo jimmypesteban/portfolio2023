@@ -152,7 +152,7 @@ export default function Projects() {
             y="50%"
             style={{ fill: "url(#pattern)" }}
           >
-            jpesteban
+            Archive Projects
           </text>
         </motion.svg>
       </motion.div>

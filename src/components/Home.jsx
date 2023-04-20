@@ -173,7 +173,7 @@ export default function Home() {
             y="50%"
             style={{ fill: "url(#pattern)" }}
           >
-            jpesteban
+            Home
           </text>
         </motion.svg>
       </motion.div>
