@@ -32,7 +32,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-pcBlack text-center pb-12 md:pt-16 lg:px-[320px] px-[16px]">
+    <footer className="bg-pcBlack text-center pb-12 pt-12 md:pt-16 lg:px-[320px] px-[16px]">
       <p className="text-pcWhite md:text-[20px] text-[16px] font-light text-center mb-4">
         You can find also me on{" "}
         <a

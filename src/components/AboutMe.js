@@ -6,6 +6,49 @@ import { motion } from "framer-motion";
 export default function AboutMe() {
   const [authorData, setAuthorData] = useState(null);
 
+  const InitialTransition = () => {};
+
+  const blackBox = {
+    initial: {
+      height: "100vh",
+      bottom: 0,
+    },
+    animate: {
+      height: 100,
+      transition: {
+        when: "afterChildren",
+        duration: 1.5,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
+
+  const textContainer = {
+    initial: {
+      opacity: 1,
+    },
+    animate: {
+      opacity: 0,
+      transition: {
+        duration: 0.25,
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const text = {
+    initial: {
+      y: 40,
+    },
+    animate: {
+      y: 80,
+      transition: {
+        duration: 1.5,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
+
   useEffect(() => {
     sanityClient
       .fetch(
@@ -31,24 +74,37 @@ export default function AboutMe() {
 
   if (!authorData) {
     return (
-      <div className="w-full h-max align-middle">
-        <motion.div
-          transition={{
-            y: {
-              duration: 1,
-              yoyo: Infinity,
-              ease: "easeIn",
-            },
-          }}
-          animate={{ y: ["0px", "-200px"] }}
-        >
-          <div className="flex h-screen">
-            <div className="m-auto">
-              <div className="h-10 w-10 rounded-full bg-blue-200 mx-auto"></div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+      <motion.div
+        className="absolute z-50 flex items-center justify-center w-full bg-black"
+        initial="initial"
+        animate="animate"
+        variants={blackBox}
+      >
+        <motion.svg variants={textContainer} className="absolute z-50 flex">
+          <pattern
+            id="pattern"
+            patternUnits="userSpaceOnUse"
+            width={750}
+            height={800}
+            className="text-white"
+          >
+            <rect className="w-full h-full fill-current" />
+            <motion.rect
+              variants={text}
+              className="w-full h-full text-gray-600 fill-current"
+            />
+          </pattern>
+          <text
+            className="text-4xl font-bold font-pfFont2"
+            text-anchor="middle"
+            x="50%"
+            y="50%"
+            style={{ fill: "url(#pattern)" }}
+          >
+            jpesteban
+          </text>
+        </motion.svg>
+      </motion.div>
     );
   }
 

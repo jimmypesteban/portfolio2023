@@ -8,15 +8,48 @@ export default function Home() {
   const [projectData, setProjectData] = useState("Homepage");
   const [loading, setLoading] = useState(true);
 
-  const [isHover, setIsHover] = useState(false);
+  const InitialTransition = () => {};
 
-   const handleMouseEnter = (index) => {
-      setIsHover(true);
-      console.log("sadasdasdgsdkl", projectData?.length);
-   };
-   const handleMouseLeave = () => {
-      setIsHover(false);
-   };
+  const blackBox = {
+    initial: {
+      height: "100vh",
+      bottom: 0,
+    },
+    animate: {
+      height: 100,
+      transition: {
+        when: "afterChildren",
+        duration: 1.5,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
+
+  const textContainer = {
+    initial: {
+      opacity: 1,
+    },
+    animate: {
+      opacity: 0,
+      transition: {
+        duration: 0.25,
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const text = {
+    initial: {
+      y: 40,
+    },
+    animate: {
+      y: 80,
+      transition: {
+        duration: 1.5,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
 
   useEffect(() => {
     console.log("called!");
@@ -71,7 +104,6 @@ export default function Home() {
       )
       .then((data) => {
         setProjectData(data);
-        console.log("asjkdhkjashkdjhk", projectData);
       })
       .catch(console.error);
 
@@ -114,25 +146,37 @@ export default function Home() {
 
   if (!authorData || loading === true) {
     return (
-      <div className="w-full h-screen fixed align-middle z-30">
-        {/* <motion.div
-          className="w-full h-screen absolute bg-black"
-          initial={{ scaleY: 1.5, y: "100vh", opacity: 1 }}
-          animate={{
-            scaleY: 1.5,
-            y: ["100vh", "0vh", "0vh", "0vh"],
-            opacity: [1, 1, 1, 1, 0],
-            transition: {
-              duration: 2,
-              ease: "easeInOut",
-              times: [0, 0.5, 0.3, 1.2],
-            },
-          }}>
-          <h1 className="text-pcWhite absolute w-full h-full flex items-center justify-center top-[-80px] font-DMSerifDisplay text-[32px] lg:text-[40px] font-bold">
-            Home
-          </h1>
-        </motion.div> */}
-      </div>
+      <motion.div
+        className="absolute z-50 flex items-center justify-center w-full bg-black"
+        initial="initial"
+        animate="animate"
+        variants={blackBox}
+      >
+        <motion.svg variants={textContainer} className="absolute z-50 flex">
+          <pattern
+            id="pattern"
+            patternUnits="userSpaceOnUse"
+            width={750}
+            height={800}
+            className="text-white"
+          >
+            <rect className="w-full h-full fill-current" />
+            <motion.rect
+              variants={text}
+              className="w-full h-full text-gray-600 fill-current"
+            />
+          </pattern>
+          <text
+            className="text-4xl font-bold font-pfFont2"
+            text-anchor="middle"
+            x="50%"
+            y="50%"
+            style={{ fill: "url(#pattern)" }}
+          >
+            jpesteban
+          </text>
+        </motion.svg>
+      </motion.div>
     );
   }
 
@@ -146,7 +190,9 @@ export default function Home() {
             <div className="absolute w-full top-[35%] mix-blend-difference md:text-[56px] text-[32px] font-bold text-center">
               Hello I'm {authorData.name}, a UI/UX Designer
               <p className="md:text-[24px] text-[20px] px-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
-                Worked in startup industries such as <br></br> <strong>Fintech</strong>, <strong>IT Consultancy</strong> and <strong>Multimedia</strong> companies.
+                Worked in startup industries such as <br></br>{" "}
+                <strong>Fintech</strong>, <strong>IT Consultancy</strong> and{" "}
+                <strong>Multimedia</strong> companies.
               </p>
               <div>
                 <p className="text-[20px] font-pfFont">
@@ -154,17 +200,23 @@ export default function Home() {
                     <a
                       className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
                       href={`${authorData.resume.asset.url}?dl=`}
-                    >Résumé
+                    >
+                      Résumé
                     </a>
-                  )}<span className="whitespace-pre font-pfFont2 font-semi-bold">  /  </span>
+                  )}
+                  <span className="whitespace-pre font-pfFont2 font-semi-bold">
+                    {" "}
+                    /{" "}
+                  </span>
                   {authorData.resume !== null && (
                     <a
                       className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
                       href={`${authorData.recommendationLetter.asset.url}?dl=`}
-                    >Recommendation Letter
+                    >
+                      Recommendation Letter
                     </a>
                   )}
-                  </p>
+                </p>
               </div>
             </div>
             {authorData.homeBanner !== null && (
@@ -240,14 +292,15 @@ export default function Home() {
                       </p>
 
                       {projectData.externalLink !== null && (
-                        <button
-                          className="hover:bg-green-700 text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
+                        <motion.button
+                          className="text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
                           style={{
-                            backgroundColor: isHover ? `${projectData.projectTagsColor}` : `${projectData.projectButtonColor}`,
-
+                            backgroundColor: `${projectData.projectTitleColor}`,
                           }}
-                          onMouseEnter={() => setIsHover(true)}
-                          onMouseLeave={() => setIsHover(false)}
+                          whileHover={{
+                            backgroundColor: `${projectData.projectTagsColor}`,
+                          }}
+                          transition={{ duration: 0.6 }}
                         >
                           <a
                             className="text-pcBlack"
@@ -255,26 +308,28 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            View in Behance {projectData.length}
+                            View in Behance
                           </a>
-                        </button>
+                        </motion.button>
                       )}
                       {projectData.liveSite !== null && (
-                        <button className="bg-blue-500 hover:bg-blue-700 text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
-                        style={{
-                          
-                          backgroundColor: isHover ? `${projectData.projectTagsColor}` : `${projectData.projectButtonColor}`,
-                        }}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        <motion.button
+                          className="text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full"
+                          style={{
+                            backgroundColor: `${projectData.projectTitleColor}`,
+                          }}
+                          whileHover={{
+                            backgroundColor: `${projectData.projectTagsColor}`,
+                          }}
+                          transition={{ duration: 0.6 }}
                         >
                           <Link
                             to={"/projects/" + projectData.slug.current}
                             key={projectData.slug.current}
                           >
-                            View Case Study {index}
+                            View Case Study
                           </Link>
-                        </button>
+                        </motion.button>
                       )}
                     </div>
                   </div>

@@ -52,7 +52,7 @@ export default function NavBar() {
   console.log(authorData);
   return (
     <header>
-      <motion.div className="md:px-[320px] px-[24px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-pfFont2 font-semibold bg-pcBlack">
+      <motion.div className="px-[24px] md:px-[36px] lg:px-[320px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-pfFont2 font-semibold bg-pcBlack">
         <div className="z-20">
           <a href="/" className="flex items-center">
             <span className="text-2xl self-center font-semibold whitespace-nowrap text-pcWhite hover:text-pcWhite transition-all ease-in-out duration-100">
