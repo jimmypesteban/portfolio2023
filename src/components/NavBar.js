@@ -53,7 +53,7 @@ export default function NavBar() {
   return (
     <header>
       <motion.div className="px-[24px] md:px-[36px] lg:px-[320px] flex flex-wrap justify-between items-center mx-auto py-8 text-[18px] font-pfFont2 font-semibold bg-pcBlack">
-        <div className="z-20">
+        <div className="z-50">
           <a href="/" className="flex items-center">
             <span className="text-2xl self-center font-semibold whitespace-nowrap text-pcWhite hover:text-pcWhite transition-all ease-in-out duration-100">
               {authorData.signature !== null && (
@@ -65,7 +65,7 @@ export default function NavBar() {
           </a>
         </div>
 
-        <button onClick={handleNavMenuToggle} className="z-20">
+        <button onClick={handleNavMenuToggle} className="z-50">
           <div className="text-pcWhite hover:text-myBlue text-left font-bold block md:hidden transition-all ease-in-out duration-100">
             {isOpen ? "Close" : "Menu"}
           </div>

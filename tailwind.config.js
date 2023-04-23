@@ -30,7 +30,7 @@ module.exports = {
 
       colors: {
         pcBlue: "#2DB4C7",
-        pcBlack: "rgba(0, 0, 0, 0.9)",
+        pcBlack: "#191919",
         pcBlack2: "#232323",
         pcGray: "rgba(255, 255, 255, 0.8)",
         pcGray2: "rgba(255, 255, 255, 0.6)",
