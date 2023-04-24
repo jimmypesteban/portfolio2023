@@ -313,7 +313,7 @@ export default function Home() {
                 animate="end"
                 variants={ellipseBox}
               >
-                <div className="absolute top-[4%] left-[-2%] lg:left-[35%]">
+                <div className="absolute top-[4%] left-[-8%] lg:left-[35%]">
                   <motion.svg
                     initial="start"
                     fill="none"
@@ -337,7 +337,7 @@ export default function Home() {
                   </motion.svg>
                 </div>
 
-                <div className="absolute lg:left-[10%]">
+                <div className="absolute left-[8%] lg:left-[10%]">
                   <motion.svg
                     initial="start"
                     fill="none"
@@ -361,7 +361,7 @@ export default function Home() {
                   </motion.svg>
                 </div>
 
-                <div className="relative">
+                <div className="relative left-[-20%] lg:left-[0]">
                   <motion.svg
                     initial="start"
                     fill="none"
@@ -414,7 +414,7 @@ export default function Home() {
               {projectData &&
                 projectData.map((projectData, index) => (
                   <div
-                    className="md:min-h-[640px] w-full bg-white rounded-[16px] "
+                    className="md:min-h-[640px] w-full bg-white rounded-[16px] shadow-[0_0_20px_rgba(255,255,255,0.24)]"
                     key={index}
                   >
                     <div className="relative">

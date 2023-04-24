@@ -1,3 +1,4 @@
+import "./styles.css";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
@@ -7,6 +8,7 @@ import {
   useScroll,
   useViewportScroll,
   useTransform,
+  useSpring,
 } from "framer-motion";
 
 export default function SingleProject() {
@@ -15,6 +17,7 @@ export default function SingleProject() {
   const [singleProjectData, setSingleProjectData] = useState(null);
   const { slug } = useParams();
   const [loading, setLoading] = useState(true);
+
   // const transition = { duration: 0.5, ease: "easeInOut" };
   // const { scrollYProgress } = useScroll();
   var testing = "100";
@@ -284,7 +287,7 @@ export default function SingleProject() {
             <rect className="w-full h-full fill-current" />
             <motion.rect
               variants={text}
-              className="w-full h-full text-gray-600 fill-current"
+              className="w-full h-full text-pcBlack2 fill-current"
             />
           </pattern>
           <text

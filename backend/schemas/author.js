@@ -54,6 +54,13 @@ export default {
     },
 
     {
+      name: "skillsContent",
+      title: "Skills Content",
+      type: "array",
+      of: [{ type: "string" }],
+    },
+
+    {
       name: 'experience',
       title: 'Experience',
       type: 'array',

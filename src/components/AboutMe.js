@@ -54,6 +54,7 @@ export default function AboutMe() {
       .fetch(
         `*[_type == "author"]{
               experience, education, bio, email,
+              skillsContent,
               resume{
                 asset->{
                   _id,
@@ -91,7 +92,7 @@ export default function AboutMe() {
             <rect className="w-full h-full fill-current" />
             <motion.rect
               variants={text}
-              className="w-full h-full text-gray-600 fill-current"
+              className="w-full h-full text-pcBlack2 fill-current"
             />
           </pattern>
           <text
@@ -118,7 +119,7 @@ export default function AboutMe() {
           backgroundImage:`url(https://raw.githubusercontent.com/jimmypesteban/portfolio2023/main/src/images/Grids3.webp)`,
         }}
       >
-      <div className="px-10 lg:px-[160px] md:px-[24px] sm:px-[24px]  flex flex-wrap justify-between items-center mx-auto py-8 font-pfFont">
+      <div className="px-8 lg:px-[160px] md:px-[24px] sm:px-[24px]  flex flex-wrap justify-between items-center mx-auto py-8 font-pfFont">
         <div className="lg:px-[160px] md:px-[24px] sm:px-[24px] mt-16 mx-auto">
           <div className="text-pcWhite text-[20px] font-light text-center mb-4">
             {authorData.bio !== null && (
@@ -160,9 +161,23 @@ export default function AboutMe() {
           <div className="text-[28px] md:text-[40px] mb-4 font-bold text-pcWhite font-pfFont2">
             Skills
           </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 grid-cols-center justify-center gap-4 md:gap-6 mt-4 text-[14px] md:text-[16px]">
+                  {authorData.skillsContent &&
+                    authorData.skillsContent.map(
+                      (skillsContent, id) => (
+                        <div
+                          className="text-pcWhite font-semibold px-2 md:px-4 py-4 rounded-[8px] border-2 border-pcWhite text-center hover:shadow-[0_0_16px_rgba(255,255,255,0.56)] shadow-[0_0_16px_rgba(255,255,255,0.24)]"
+                          key={id}
+                        >
+                          {skillsContent}
+                        </div>
+                      )
+                    )}
+                </div>
         </div>
 
-        <div className="w-full lg:px-[160px] md:px-[24px] sm:px-[24px] mt-8">
+        <div className="w-full lg:px-[160px] md:px-[24px] sm:px-[24px] mt-16">
           <div className="text-[28px] md:text-[40px] mb-4 font-bold text-pcWhite font-pfFont2">
             Experience
           </div>
@@ -179,7 +194,7 @@ export default function AboutMe() {
 
                     <h3 className="text-lg text-pcGray font-pfFont2 text-[32px] font-medium pt-4">
                       {experience.roleTitle},{" "}
-                      <span className="text-pcWhite font-bold hover:text-pcBlue">
+                      <span className="text-pcWhite underline font-bold relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full hover:no-underline">
                         <a href={experience.titleLink}>{experience.title}</a>
                       </span>
                     </h3>
