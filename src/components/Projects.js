@@ -160,9 +160,14 @@ export default function Projects() {
   }
 
   return (
-    <main className="bg-pcBlack">
+    <div
+        className="bg-repeat"
+        style={{
+          backgroundImage:`url(https://raw.githubusercontent.com/jimmypesteban/portfolio2023/main/src/images/Grids3.webp)`,
+        }}
+      >
       <section className="lg:mx-[320px]">
-        <h1 className="lg:text-[40px] text-[28px] text-pcWhite font-pfFont2 font-bold text-center mb-2">
+        <h1 className="lg:text-[40px] text-[28px] text-pcWhite font-pfFont2 font-bold text-center mb-2 lg:pt-16">
           Archive
         </h1>
         <p className="text-[16px] text-pcWhite font-pfFont2 font-medium text-center mb-10">
@@ -187,7 +192,7 @@ export default function Projects() {
                 }}
               >
                 <div
-                  className="bg-pcBlack/50 min-h-[480px] rounded-[8px] transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,1)] shadow-[0_0_8px_rgba(255,255,255,0.12)]"
+                  className="bg-pcBlack min-h-[480px] rounded-[8px] transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,1)] shadow-[0_0_8px_rgba(255,255,255,0.12)]"
                   key={index}
                 >
                   <div className="text-white">
@@ -269,7 +274,7 @@ export default function Projects() {
                 }}
               >
                 <div
-                  className="bg-pcBlack/50 min-h-[480px] rounded-[8px] transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,1)]"
+                  className="bg-pcBlack min-h-[480px] rounded-[8px] transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,1)] shadow-[0_0_8px_rgba(255,255,255,0.12)]"
                   key={index}
                 >
                   <div className="text-white">
@@ -331,6 +336,6 @@ export default function Projects() {
             ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -244,42 +244,48 @@ export default function Home() {
   console.log(projectData);
   return (
     <>
-      <div className="bg-pcBlack -z-10">
-        <div className="font-pfFont2 text-pcWhite">
-          <div className="relative w-full h-[calc(100vh-100px)]">
-            <div className="absolute w-full top-[35%] mix-blend-difference md:text-[56px] text-[32px] font-bold text-center">
-              Hello I'm {authorData.name}, a UI/UX Designer
-              <p className="md:text-[24px] text-[20px] px-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
-                Worked in startup industries such as <br></br>{" "}
-                <strong>Fintech</strong>, <strong>IT Consultancy</strong> and{" "}
-                <strong>Multimedia</strong> companies.
-              </p>
-              <div>
-                <p className="text-[20px] font-pfFont">
-                  {authorData.resume !== null && (
-                    <a
-                      className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
-                      href={`${authorData.resume.asset.url}?dl=`}
-                    >
-                      Résumé
-                    </a>
-                  )}
-                  <span className="whitespace-pre font-pfFont2 font-semi-bold">
-                    {" "}
-                    /{" "}
-                  </span>
-                  {authorData.resume !== null && (
-                    <a
-                      className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
-                      href={`${authorData.recommendationLetter.asset.url}?dl=`}
-                    >
-                      Recommendation Letter
-                    </a>
-                  )}
+      <div
+        className="bg-repeat"
+        style={{
+          backgroundImage:`url(https://raw.githubusercontent.com/jimmypesteban/portfolio2023/main/src/images/Grids3.webp)`,
+        }}
+      >
+        <div className="">
+          <div className="font-pfFont2 text-pcWhite">
+            <div className="relative w-full h-[calc(100vh-100px)]">
+              <div className="absolute w-full top-[35%] mix-blend-difference md:text-[56px] text-[32px] font-bold text-center z-50">
+                Hello I'm {authorData.name}, a UI/UX Designer
+                <p className="md:text-[24px] text-[20px] px-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
+                  Worked in startup industries such as <br></br>{" "}
+                  <strong>Fintech</strong>, <strong>IT Consultancy</strong> and{" "}
+                  <strong>Multimedia</strong> companies.
                 </p>
+                <div>
+                  <p className="text-[20px] font-pfFont z-50">
+                    {authorData.resume !== null && (
+                      <a
+                        className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
+                        href={`${authorData.resume.asset.url}?dl=`}
+                      >
+                        Résumé
+                      </a>
+                    )}
+                    <span className="whitespace-pre font-pfFont2 font-semi-bold">
+                      {" "}
+                      /{" "}
+                    </span>
+                    {authorData.resume !== null && (
+                      <a
+                        className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
+                        href={`${authorData.recommendationLetter.asset.url}?dl=`}
+                      >
+                        Recommendation Letter
+                      </a>
+                    )}
+                  </p>
+                </div>
               </div>
-            </div>
-            {/* <motion.div
+              {/* <motion.div
               className="w-[200px] h-[200px] border-2 border-pcWhite relative left-[50%] top-[35%] mix-blend-difference"
               animate={{
                 scale: [1, 1, 1],
@@ -299,88 +305,88 @@ export default function Home() {
               }}
             ></motion.div> */}
 
-            {/* viewBox="0 0 100 100" */}
+              {/* viewBox="0 0 100 100" */}
 
-            <motion.div
-              className="absolute mix-blend-difference max-w-full overflow-x-hidden z-0"
-              initial="start"
-              animate="end"
-              variants={ellipseBox}
-            >
-              <div className="absolute top-[4%] left-[-2%] lg:left-[35%]">
-                <motion.svg
-                  initial="start"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="640"
-                  height="640"
-                  viewBox="-80 -80 200 200"
-                  animate="end"
-                >
-                  <motion.path
-                    variants={ellipseVariants}
-                    transition={{
-                      duration: 10,
-                      ease: [0.87, 0, 0.13, 1],
-                      yoyo: Infinity,
-                      repeat: Infinity,
-                    }}
-                    stroke-width="1"
-                    stroke="White"
-                  />
-                </motion.svg>
-              </div>
+              <motion.div
+                className="absolute mix-blend-difference max-w-full overflow-x-hidden z-0"
+                initial="start"
+                animate="end"
+                variants={ellipseBox}
+              >
+                <div className="absolute top-[4%] left-[-2%] lg:left-[35%]">
+                  <motion.svg
+                    initial="start"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="640"
+                    height="640"
+                    viewBox="-80 -80 200 200"
+                    animate="end"
+                  >
+                    <motion.path
+                      variants={ellipseVariants}
+                      transition={{
+                        duration: 10,
+                        ease: [0.87, 0, 0.13, 1],
+                        yoyo: Infinity,
+                        repeat: Infinity,
+                      }}
+                      stroke-width="1"
+                      stroke="White"
+                    />
+                  </motion.svg>
+                </div>
 
-              <div className="absolute lg:left-[10%]">
-                <motion.svg
-                  initial="start"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2400"
-                  height="2400"
-                  viewBox="-60 -20 135 135"
-                  animate="end"
-                >
-                  <motion.path
-                    variants={ellipseVariants}
-                    transition={{
-                      duration: 10,
-                      ease: [0.87, 0, 0.13, 1],
-                      yoyo: Infinity,
-                      repeat: Infinity,
-                    }}
-                    stroke-width=".2"
-                    stroke="White"
-                  />
-                </motion.svg>
-              </div>
+                <div className="absolute lg:left-[10%]">
+                  <motion.svg
+                    initial="start"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2400"
+                    height="2400"
+                    viewBox="-60 -20 135 135"
+                    animate="end"
+                  >
+                    <motion.path
+                      variants={ellipseVariants}
+                      transition={{
+                        duration: 10,
+                        ease: [0.87, 0, 0.13, 1],
+                        yoyo: Infinity,
+                        repeat: Infinity,
+                      }}
+                      stroke-width=".2"
+                      stroke="White"
+                    />
+                  </motion.svg>
+                </div>
 
-              <div className="relative">
-                <motion.svg
-                  initial="start"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2400"
-                  height="2400"
-                  viewBox="30 -30 150 150"
-                  animate="end"
-                >
-                  <motion.path
-                    variants={ellipseVariants}
-                    transition={{
-                      duration: 10,
-                      ease: [0.87, 0, 0.13, 1],
-                      yoyo: Infinity,
-                      repeat: Infinity,
-                    }}
-                    stroke-width=".2"
-                    stroke="White"
-                  />
-                </motion.svg>
-              </div>
-            </motion.div>
+                <div className="relative">
+                  <motion.svg
+                    initial="start"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2400"
+                    height="2400"
+                    viewBox="30 -30 150 150"
+                    animate="end"
+                  >
+                    <motion.path
+                      variants={ellipseVariants}
+                      transition={{
+                        duration: 10,
+                        ease: [0.87, 0, 0.13, 1],
+                        yoyo: Infinity,
+                        repeat: Infinity,
+                      }}
+                      stroke-width=".2"
+                      stroke="White"
+                    />
+                  </motion.svg>
+                </div>
+              </motion.div>
 
-            {/* {authorData.homeBanner !== null && (
+              {/* {authorData.homeBanner !== null && (
               <div className="">
                 <img
                   alt={authorData.homeBanner.asset.url}
@@ -389,140 +395,143 @@ export default function Home() {
                 />
               </div>
             )} */}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="bg-pcBlack mt-[-240px] md:mt-0  lg:pt-12 lg:px-[320px] px-[16px] z-0">
-        <div className="lg:columns-2 sm:columns-1 gap-10">
-          <div className="flex flex-wrap justify-center items-center min-h-[320px]  mb-10 mix-blend-difference">
-            <div className="relative mb-[-120px] md:mb-0 lg:mb-0 inline-flex lg:text-[96px] text-[64px] text-Black font-bold font-pfFont2 text-center drop-shadow-[0_0.8px_0.8px_rgba(255,255,255,1)]  ">
-              Selected Works
+        <div className="mt-[-240px] md:mt-0  lg:pt-12 lg:px-[320px] px-[16px]">
+          <div className="lg:columns-2 sm:columns-1 gap-10">
+            <div className="flex flex-wrap justify-center items-center min-h-[320px]  mb-10 ">
+              <div className="relative mb-[-120px] md:mb-0 lg:mb-0 inline-flex lg:text-[96px] text-[64px] text-Black font-bold font-pfFont2 text-center drop-shadow-[0_0.8px_0.8px_rgba(255,255,255,1)]  mix-blend-difference">
+                Selected Works
+              </div>
+              <div className="absolute mb-[-120px] md:mb-0 lg:mb-0 inline-flex lg:text-[48px] text-[32px] font-bold text-pcWhite font-pfFont2 text-center">
+                Selected Works
+              </div>
             </div>
-            <div className="absolute mb-[-120px] md:mb-0 lg:mb-0 inline-flex lg:text-[48px] text-[32px] font-bold text-pcWhite font-pfFont2 text-center">
-              Selected Works
-            </div>
-          </div>
 
-          <div className="">
-            {projectData &&
-              projectData.map((projectData, index) => (
-                <div
-                  className="md:min-h-[640px] w-full bg-white rounded-[16px] "
-                  key={index}
-                >
-                  <div className="relative">
-                    <img
-                      alt={projectData.projectHomeBanner.asset.url}
-                      className="w-full object-cover rounded-[8px] mt-8"
-                      src={projectData.projectHomeBanner.asset.url}
-                    />
-                    <div className="absolute top-0 w-full md:min-h-[640px] p-12 rounded-[8px]">
-                      {/* <img
+            <div className="">
+              {projectData &&
+                projectData.map((projectData, index) => (
+                  <div
+                    className="md:min-h-[640px] w-full bg-white rounded-[16px] "
+                    key={index}
+                  >
+                    <div className="relative">
+                      <img
+                        alt={projectData.projectHomeBanner.asset.url}
+                        className="w-full object-cover rounded-[8px] mt-8"
+                        src={projectData.projectHomeBanner.asset.url}
+                      />
+                      <div className="absolute top-0 w-full md:min-h-[640px] p-12 rounded-[8px]">
+                        {/* <img
                     className="w-[40px]"
                     src={projectData.projectLogo.asset.url}
                   /> */}
 
-                      <p
-                        className="text-[16px] font-semibold"
-                        style={{ color: `${projectData.extraColor2}` }}
-                      >
-                        {projectData.duration}
-                      </p>
-                      <h1
-                        className="font-extrabold md:text-[36px] text-[28px] font-pfFont2"
-                        style={{ color: `${projectData.projectTitleColor}` }}
-                      >
-                        {projectData.title}
-                      </h1>
-                      <p
-                        className="text-[20px] font-semibold mb-2"
-                        style={{ color: `${projectData.extraColor2}` }}
-                      >
-                        {projectData.role}
-                      </p>
+                        <p
+                          className="text-[16px] font-semibold"
+                          style={{ color: `${projectData.extraColor2}` }}
+                        >
+                          {projectData.duration}
+                        </p>
+                        <h1
+                          className="font-extrabold md:text-[36px] text-[28px] font-pfFont2"
+                          style={{ color: `${projectData.projectTitleColor}` }}
+                        >
+                          {projectData.title}
+                        </h1>
+                        <p
+                          className="text-[20px] font-semibold mb-2"
+                          style={{ color: `${projectData.extraColor2}` }}
+                        >
+                          {projectData.role}
+                        </p>
 
-                      <div className="flex flex-wrap mb-3">
-                        {projectData.projectTags &&
-                          projectData.projectTags.map((projectTags, id) => (
-                            <div
-                              className="md:text-[14px] text-[12px] font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                        <div className="flex flex-wrap mb-3">
+                          {projectData.projectTags &&
+                            projectData.projectTags.map((projectTags, id) => (
+                              <div
+                                className="md:text-[14px] text-[12px] font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                                style={{
+                                  backgroundColor: `${projectData.projectTagsColor}`,
+                                }}
+                                key={id}
+                              >
+                                {projectTags}
+                              </div>
+                            ))}
+                        </div>
+
+                        <p
+                          className="text-[16px] font-medium font-pfFont mb-5"
+                          style={{ color: `${projectData.extraColor2}` }}
+                        >
+                          {projectData.brief}
+                        </p>
+
+                        {projectData.externalLink !== null && (
+                          <motion.button
+                            className="text-pcBlack font-pfFont font-bold py-2 px-4 rounded-full"
+                            style={{
+                              backgroundColor: `${projectData.projectTitleColor}`,
+                            }}
+                            whileHover={{
+                              backgroundColor: `${projectData.projectButtonColor}`,
+                              scale: 1.02,
+                            }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <a
                               style={{
-                                backgroundColor: `${projectData.projectTagsColor}`,
+                                color: `${projectData.extraColor1}`,
                               }}
-                              key={id}
+                              href={projectData.externalLink}
+                              target="_blank"
+                              rel="noreferrer"
                             >
-                              {projectTags}
-                            </div>
-                          ))}
+                              View in Behance
+                            </a>
+                          </motion.button>
+                        )}
+                        {projectData.liveSite !== null && (
+                          <motion.button
+                            className=" font-pfFont font-bold py-2 px-4 rounded-full"
+                            style={{
+                              backgroundColor: `${projectData.projectTitleColor}`,
+                            }}
+                            whileHover={{
+                              backgroundColor: `${projectData.projectButtonColor}`,
+                              scale: 1.02,
+                            }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <Link
+                              style={{
+                                color: `${projectData.extraColor1}`,
+                              }}
+                              to={"/projects/" + projectData.slug.current}
+                              key={projectData.slug.current}
+                            >
+                              View Case Study
+                            </Link>
+                          </motion.button>
+                        )}
                       </div>
-
-                      <p
-                        className="text-[16px] font-medium font-pfFont mb-5"
-                        style={{ color: `${projectData.extraColor2}` }}
-                      >
-                        {projectData.brief}
-                      </p>
-
-                      {projectData.externalLink !== null && (
-                        <motion.button
-                          className="text-pcBlack font-pfFont font-bold py-2 px-4 rounded-full"
-                          style={{
-                            backgroundColor: `${projectData.projectTitleColor}`,
-                          }}
-                          whileHover={{
-                            backgroundColor: `${projectData.projectButtonColor}`,
-                          }}
-                          transition={{ duration: 0.4 }}
-                        >
-                          <a
-                            style={{
-                              color: `${projectData.extraColor1}`,
-                            }}
-                            href={projectData.externalLink}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            View in Behance
-                          </a>
-                        </motion.button>
-                      )}
-                      {projectData.liveSite !== null && (
-                        <motion.button
-                          className=" font-pfFont font-bold py-2 px-4 rounded-full"
-                          style={{
-                            backgroundColor: `${projectData.projectTitleColor}`,
-                          }}
-                          whileHover={{
-                            backgroundColor: `${projectData.projectButtonColor}`,
-                          }}
-                          transition={{ duration: 0.4 }}
-                        >
-                          <Link
-                            style={{
-                              color: `${projectData.extraColor1}`,
-                            }}
-                            to={"/projects/" + projectData.slug.current}
-                            key={projectData.slug.current}
-                          >
-                            View Case Study
-                          </Link>
-                        </motion.button>
-                      )}
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="pt-[80px] pb-[80px] bg-pcBlack text-center">
-        <button className="h-[72px] w-[160px] border border-pcWhite hover:bg-pcWhite hover:text-pcBlack text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full ">
-          <Link to="/Projects" className="p-0 md:p-4">
-            More Works
-          </Link>
-        </button>
+        <div className="pt-[80px] pb-[80px] text-center">
+          <button className="h-[72px] w-[160px] bg-pcBlack border border-pcWhite hover:bg-pcWhite hover:text-pcBlack text-pcWhite font-pfFont font-bold py-2 px-4 rounded-full ">
+            <Link to="/Projects" className="p-0 md:p-4">
+              More Works
+            </Link>
+          </button>
+        </div>
       </div>
     </>
   );

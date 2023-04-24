@@ -112,7 +112,13 @@ export default function AboutMe() {
 
   return (
     <>
-      <div className="px-10 lg:px-[160px] md:px-[24px] sm:px-[24px]  bg-pcBlack flex flex-wrap justify-between items-center mx-auto py-8 font-pfFont">
+    <div
+        className="bg-repeat"
+        style={{
+          backgroundImage:`url(https://raw.githubusercontent.com/jimmypesteban/portfolio2023/main/src/images/Grids3.webp)`,
+        }}
+      >
+      <div className="px-10 lg:px-[160px] md:px-[24px] sm:px-[24px]  flex flex-wrap justify-between items-center mx-auto py-8 font-pfFont">
         <div className="lg:px-[160px] md:px-[24px] sm:px-[24px] mt-16 mx-auto">
           <div className="text-pcWhite text-[20px] font-light text-center mb-4">
             {authorData.bio !== null && (
@@ -217,6 +223,7 @@ export default function AboutMe() {
               ))}
           </ol>
         </div>
+      </div>
       </div>
     </>
   );
