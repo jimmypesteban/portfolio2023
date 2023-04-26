@@ -121,7 +121,7 @@ export default function AboutMe() {
       >
       <div className="px-8 lg:px-[160px] md:px-[24px] sm:px-[24px]  flex flex-wrap justify-between items-center mx-auto py-8 font-pfFont">
         <div className="lg:px-[160px] md:px-[24px] sm:px-[24px] mt-16 mx-auto">
-          <div className="text-pcWhite text-[20px] font-light text-center mb-4">
+          <div className="text-pcWhite text-[20px] font-normal text-center mb-4">
             {authorData.bio !== null && (
               <BlockContent
                 className=""
@@ -167,7 +167,7 @@ export default function AboutMe() {
                     authorData.skillsContent.map(
                       (skillsContent, id) => (
                         <div
-                          className="text-pcWhite font-semibold px-2 md:px-4 py-4 rounded-[8px] border-2 border-pcWhite text-center hover:shadow-[0_0_16px_rgba(255,255,255,0.56)] shadow-[0_0_16px_rgba(255,255,255,0.24)]"
+                          className="text-pcWhite font-semibold px-2 md:px-4 py-4 rounded-[8px] border-2 border-pcWhite text-center hover:shadow-[0_0_16px_rgba(255,255,255,0.56)] shadow-[0_0_16px_rgba(255,255,255,0.24)] hover:bg-pcWhite/10"
                           key={id}
                         >
                           {skillsContent}
