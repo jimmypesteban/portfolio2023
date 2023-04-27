@@ -431,7 +431,7 @@ export default function SingleProject() {
                 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
                 style={{ color: `${singleProjectData.extraColor3}` }}
               >
-                The Goal
+                The Breakdown
               </h1>
               <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
                 <BlockContent
@@ -439,6 +439,29 @@ export default function SingleProject() {
                   blocks={singleProjectData.goal}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
+                />
+              </div>
+
+              <div className="grid grid-cols-4 gap-4 my-4">
+                {singleProjectData &&
+                  singleProjectData.designSystemGallery.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              <div>
+                <img
+                  className=""
+                  src={singleProjectData.extraImage2.asset.url}
+                  alt={singleProjectData.name}
                 />
               </div>
             </div>
@@ -474,14 +497,14 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite mb-4">
+              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite mb-4">
                 <BlockContent
                   className=""
                   blocks={singleProjectData.extraBlock1}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
                 />
-              </div>
+              </div> */}
 
               <div>
                 <img
@@ -519,18 +542,165 @@ export default function SingleProject() {
 
             <div className="mt-6 lg:mt-12 mb-6 lg:mb-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1
-                className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
+                className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2 text-center"
                 style={{ color: `${singleProjectData.extraColor3}` }}
               >
                 {singleProjectData.gifTitle}
               </h1>
-              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
                 <BlockContent
                   className=""
                   blocks={singleProjectData.gifBlock}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
                 />
+              </div> */}
+
+                <h1
+                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                >
+                  Trials Page
+                </h1>
+              
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.gifGallery.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              <h1
+                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                >
+                  Templates Page
+                </h1>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.extraGallery2.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              <h1
+                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                >
+                  User Management Page
+                </h1>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.extraGallery3.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              <h1
+                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                >
+                  Audit
+                </h1>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.extraGallery4.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+
+            </div>
+
+
+            <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
+              <h1
+                className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                style={{ color: `${singleProjectData.extraColor3}` }}
+              >
+                {singleProjectData.extraTitle1}
+              </h1>
+
+              <h1
+                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                >
+                  Dashboard and Calendar Page
+                </h1>
+              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock10}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div> */}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.extraGallery5.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              <h1
+                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                >
+                  Messenger Page
+                </h1>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.extraGallery6.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
               </div>
             </div>
 

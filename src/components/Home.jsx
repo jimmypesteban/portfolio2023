@@ -253,7 +253,7 @@ export default function Home() {
         <div className="">
           <div className="font-pfFont2 text-pcWhite">
             <div className="relative w-full h-[calc(100vh-100px)]">
-              <div className="absolute w-full top-[35%] mix-blend-difference md:text-[56px] text-[32px] font-bold text-center z-50">
+              <div className="absolute w-full top-[35%] md:text-[56px] text-[32px] font-bold text-center z-0">
                 Hello I'm {authorData.name}, a UI/UX Designer
                 <p className="md:text-[24px] text-[20px] px-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
                   Worked in startup industries such as <br></br>{" "}
@@ -423,7 +423,7 @@ export default function Home() {
                         className="w-full object-cover rounded-[8px] mt-8"
                         src={projectData.projectHomeBanner.asset.url}
                       />
-                      <div className="absolute top-0 w-full md:min-h-[640px] p-12 rounded-[8px]">
+                      <div className="absolute top-0 w-full md:min-h-[640px] p-6 md:p-12 rounded-[8px]">
                         {/* <img
                     className="w-[40px]"
                     src={projectData.projectLogo.asset.url}
@@ -436,13 +436,13 @@ export default function Home() {
                           {projectData.duration}
                         </p>
                         <h1
-                          className="font-extrabold md:text-[36px] text-[28px] font-pfFont2"
+                          className="font-extrabold md:text-[36px] text-[24px] font-pfFont2"
                           style={{ color: `${projectData.projectTitleColor}` }}
                         >
                           {projectData.title}
                         </h1>
                         <p
-                          className="text-[20px] font-semibold mb-2"
+                          className="text-[16px] md:text-[20px] font-semibold mb-2"
                           style={{ color: `${projectData.extraColor2}` }}
                         >
                           {projectData.role}
@@ -464,7 +464,7 @@ export default function Home() {
                         </div>
 
                         <p
-                          className="text-[16px] font-medium font-pfFont mb-5"
+                          className="md:text-[16px] font-medium font-pfFont mb-5"
                           style={{ color: `${projectData.extraColor2}` }}
                         >
                           {projectData.brief}
