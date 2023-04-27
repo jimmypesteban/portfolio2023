@@ -326,7 +326,7 @@ export default function Home() {
                     <motion.path
                       variants={ellipseVariants}
                       transition={{
-                        duration: 10,
+                        duration: 12,
                         ease: [0.87, 0, 0.13, 1],
                         yoyo: Infinity,
                         repeat: Infinity,
@@ -350,7 +350,7 @@ export default function Home() {
                     <motion.path
                       variants={ellipseVariants}
                       transition={{
-                        duration: 10,
+                        duration: 12,
                         ease: [0.87, 0, 0.13, 1],
                         yoyo: Infinity,
                         repeat: Infinity,
@@ -374,7 +374,7 @@ export default function Home() {
                     <motion.path
                       variants={ellipseVariants}
                       transition={{
-                        duration: 10,
+                        duration: 12,
                         ease: [0.87, 0, 0.13, 1],
                         yoyo: Infinity,
                         repeat: Infinity,
