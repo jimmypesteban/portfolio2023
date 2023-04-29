@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function Projects() {
   const [projectData, setProjectData] = useState(null);
   const [projectPersonalData, setProjectPersonalData] = useState(null);
+  const [loading, setLoading] = useState(true);
   // const [filter, setFilter] = useState("All Project");
 
   const InitialTransition = () => {};
@@ -52,6 +53,10 @@ export default function Projects() {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
     sanityClient
       .fetch(
         `*[_type == "project" && "All Project" in categories[]->title] | order(publishedAt desc){
@@ -123,7 +128,7 @@ export default function Projects() {
       .catch(console.error);
   }, []);
 
-  if (!projectData) {
+  if (!projectData || loading === true) {
     return (
       <motion.div
         className="absolute z-50 flex items-center justify-center w-full bg-black"
@@ -152,7 +157,7 @@ export default function Projects() {
             y="50%"
             style={{ fill: "url(#pattern)" }}
           >
-            Archive Projects
+           Project Archive 
           </text>
         </motion.svg>
       </motion.div>
@@ -182,7 +187,7 @@ export default function Projects() {
                 whileHover={{
                   scale: 1.02,
                 }}
-                initial={{ y: "100%", opacity: 0 }}
+                initial={{ y: "10%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1, duration: 0.5, ease: "easeInOut" }}
                 exit={{
                   x: "-100%",

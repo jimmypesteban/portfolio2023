@@ -67,6 +67,10 @@ export default function SingleProject() {
 
   useEffect(() => {
     //console.log("sadasda", scrollYProgress)
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
     sanityClient
       .fetch(
         `*[slug.current == "${slug}"] {
@@ -265,11 +269,10 @@ export default function SingleProject() {
       )
       .then((data) => setSingleProjectData(data[0]))
       .catch(console.error);
-    setLoading(false);
   }, [slug]);
 
   console.log("loading is now: " + loading);
-  if (!singleProjectData) {
+  if (!singleProjectData || loading === true) {
     return (
       <motion.div
         className="absolute z-50 flex items-center justify-center w-full bg-black"
@@ -298,7 +301,7 @@ export default function SingleProject() {
             y="50%"
             style={{ fill: "url(#pattern)" }}
           >
-            jpesteban
+            jimmypesteban
           </text>
         </motion.svg>
       </motion.div>
@@ -339,7 +342,16 @@ export default function SingleProject() {
         {/* <h1 className="text-pcWhite text-2xl font-bold">
           This is layout {singleProjectData.layout}
         </h1> */}
-
+<motion.div
+      initial={{ y: "10%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1, duration: 0.5, ease: "easeInOut" }}
+      exit={{
+        x: "-100%",
+        opacity: 0,
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+    >
         <h1
           className="flex justify-center items-center text-pcWhite font-pfFont2 font-bold lg:text-[40px] text-[28px] pt-6 md:pt-10 lg:pt-16 mb-4"
           style={{
@@ -366,12 +378,14 @@ export default function SingleProject() {
               </div>
             ))}
         </div>
+        </motion.div>
 
         <div className="overflow-hidden rounded-[8px] max-h-[720px]">
           <motion.img
-            style={{ scale: scale }}
-            initial={{ scale: 1.0 }}
-            duration
+            style={{ scale: scale}}
+            initial={{ scale: 1.0, y: "10%"}}
+            animate={{ y: 0, duration: 0.5, ease: "easeInOut"}}
+            
             className="object-center"
             src={singleProjectData.projectBanner.asset.url}
             alt={singleProjectData.name}
@@ -423,6 +437,7 @@ export default function SingleProject() {
             </div>
           </div>
         </div>
+       
 
         {singleProjectData.layout === "1" ? (
           <div>

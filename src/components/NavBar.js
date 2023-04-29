@@ -126,14 +126,14 @@ export default function NavBar() {
           <div className="hidden md:block">
           <NavLink
               to="/"
-              className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
+              className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
             >
               Home
             </NavLink>
             <span className="whitespace-pre">        </span>
             <NavLink
               to="/Projects"
-              className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
+              className="text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
             >
               Project Archive
             </NavLink>
@@ -153,7 +153,7 @@ export default function NavBar() {
             </NavLink> */}
             <NavLink
               to="/AboutMe"
-              className=" text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full"
+              className=" text-pcWhite relative duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[10px] after:absolute after:duration-300 hover:after:w-full"
             >
               About Me
             </NavLink>
