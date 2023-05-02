@@ -399,7 +399,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-[-240px] md:mt-0  lg:pt-12 lg:px-[320px] px-[16px]">
+        <div className="mt-[-240px] md:mt-0  lg:pt-12 2xl:px-[320px] lg:px-[80px] px-[16px]">
           <div className="lg:columns-2 sm:columns-1 gap-10">
             <div className="flex flex-wrap justify-center items-center min-h-[320px]  mb-10 ">
               <div className="relative mb-[-120px] md:mb-0 lg:mb-0 inline-flex lg:text-[96px] text-[64px] text-Black font-bold font-pfFont2 text-center drop-shadow-[0_0.8px_0.8px_rgba(255,255,255,1)]  mix-blend-difference">
