@@ -332,7 +332,7 @@ export default function SingleProject() {
       </div>
 
       <div
-        className="px-[24px] lg:px-[240px] md:px-[24px] text-pfFont bg-repeat"
+        className="px-[24px] 2xl:px-[240px] md:px-[24px] lg:px-[80px] text-pfFont bg-repeat"
         style={{
           backgroundImage: `url(https://raw.githubusercontent.com/jimmypesteban/portfolio2023/main/src/images/Grids3.webp)`,
         }}
