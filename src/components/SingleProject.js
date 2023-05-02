@@ -342,50 +342,49 @@ export default function SingleProject() {
         {/* <h1 className="text-pcWhite text-2xl font-bold">
           This is layout {singleProjectData.layout}
         </h1> */}
-<motion.div
-      initial={{ y: "10%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1, duration: 0.5, ease: "easeInOut" }}
-      exit={{
-        x: "-100%",
-        opacity: 0,
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
-    >
-        <h1
-          className="flex justify-center items-center text-pcWhite font-pfFont2 font-bold lg:text-[40px] text-[28px] pt-6 md:pt-10 lg:pt-16 mb-4"
-          style={{
-            color: `${singleProjectData.extraColor3}`
-              ? `${singleProjectData.extraColor3}`
-              : "#FFFFFF",
+        <motion.div
+          initial={{ y: "10%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1, duration: 0.5, ease: "easeInOut" }}
+          exit={{
+            x: "-100%",
+            opacity: 0,
+            duration: 0.5,
+            ease: "easeInOut",
           }}
         >
-          {singleProjectData.title}
-        </h1>
+          <h1
+            className="flex justify-center items-center text-pcWhite font-pfFont2 font-bold lg:text-[40px] text-[28px] pt-6 md:pt-10 lg:pt-16 mb-4"
+            style={{
+              color: `${singleProjectData.extraColor3}`
+                ? `${singleProjectData.extraColor3}`
+                : "#FFFFFF",
+            }}
+          >
+            {singleProjectData.title}
+          </h1>
 
-        <div className="flex justify-center flex-wrap lg:mb-12 mb-6">
-          {singleProjectData.projectTags &&
-            singleProjectData.projectTags.map((projectTags, id) => (
-              <div
-                // className=" text-[14px] text-pcBlack2 bg-pcBlack2/20 font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
-                className="text-[12px] md:text-[14px] text-pcBlack2 bg-pcWhite font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
-                style={{
-                  backgroundColor: `${singleProjectData.projectTagsColor}`,
-                }}
-                key={id}
-              >
-                {projectTags}
-              </div>
-            ))}
-        </div>
+          <div className="flex justify-center flex-wrap lg:mb-12 mb-6">
+            {singleProjectData.projectTags &&
+              singleProjectData.projectTags.map((projectTags, id) => (
+                <div
+                  // className=" text-[14px] text-pcBlack2 bg-pcBlack2/20 font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                  className="text-[12px] md:text-[14px] text-pcBlack2 bg-pcWhite font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                  style={{
+                    backgroundColor: `${singleProjectData.projectTagsColor}`,
+                  }}
+                  key={id}
+                >
+                  {projectTags}
+                </div>
+              ))}
+          </div>
         </motion.div>
 
         <div className="overflow-hidden rounded-[8px] max-h-[720px]">
           <motion.img
-            style={{ scale: scale}}
-            initial={{ scale: 1.0, y: "10%"}}
-            animate={{ y: 0, duration: 0.5, ease: "easeInOut"}}
-            
+            style={{ scale: scale }}
+            initial={{ scale: 1.0, y: "10%" }}
+            animate={{ y: 0, duration: 0.5, ease: "easeInOut" }}
             className="object-center"
             src={singleProjectData.projectBanner.asset.url}
             alt={singleProjectData.name}
@@ -437,7 +436,6 @@ export default function SingleProject() {
             </div>
           </div>
         </div>
-       
 
         {singleProjectData.layout === "1" ? (
           <div>
@@ -571,33 +569,23 @@ export default function SingleProject() {
                 />
               </div> */}
 
-                <h1
-                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
-                >
-                  Trials Page
-                </h1>
-              
+              <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                Trials Page
+              </h1>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {singleProjectData &&
-                  singleProjectData.gifGallery.map(
-                    (graphicsgallery, index) => (
-                      <a href={graphicsgallery.asset.url} target="_blank">
-                        {" "}
-                        <img
-                          className="w-full"
-                          src={graphicsgallery.asset.url}
-                        />
-                      </a>
-                    )
-                  )}
+                  singleProjectData.gifGallery.map((graphicsgallery, index) => (
+                    <a href={graphicsgallery.asset.url} target="_blank">
+                      {" "}
+                      <img className="w-full" src={graphicsgallery.asset.url} />
+                    </a>
+                  ))}
               </div>
 
-              <h1
-                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
-                >
-                  Templates Page
-                </h1>
+              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                Templates Page
+              </h1>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {singleProjectData &&
@@ -614,11 +602,9 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1
-                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
-                >
-                  User Management Page
-                </h1>
+              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                User Management Page
+              </h1>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {singleProjectData &&
@@ -635,11 +621,9 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1
-                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
-                >
-                  Audit
-                </h1>
+              <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                Audit
+              </h1>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {singleProjectData &&
@@ -655,10 +639,7 @@ export default function SingleProject() {
                     )
                   )}
               </div>
-
-
             </div>
-
 
             <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1
@@ -668,19 +649,17 @@ export default function SingleProject() {
                 {singleProjectData.extraTitle1}
               </h1>
 
-              <h1
-                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
-                >
-                  Dashboard and Calendar Page
-                </h1>
-              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+              <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                Dashboard and Calendar Page
+              </h1>
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
                 <BlockContent
                   className=""
-                  blocks={singleProjectData.extraBlock10}
+                  blocks={singleProjectData.extraBlock8}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
                 />
-              </div> */}
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {singleProjectData &&
@@ -697,11 +676,18 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1
-                  className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center"
-                >
-                  Messenger Page
-                </h1>
+              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                Messenger Page
+              </h1>
+
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock9}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {singleProjectData &&
@@ -717,6 +703,16 @@ export default function SingleProject() {
                     )
                   )}
               </div>
+
+              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+                Support / Tickets
+              </h1>
+                      
+              <iframe
+                  className="w-full aspect-video"
+                  src={singleProjectData.extraTitle6}
+                ></iframe>
+
             </div>
 
             <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
@@ -1230,55 +1226,55 @@ export default function SingleProject() {
                   {singleProjectData.processTitle}
                 </p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 text-pcWhite mt-4">
-                <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
-                  <BlockContent
-                    className=""
-                    blocks={singleProjectData.extraBlock1}
-                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                    dataset="production"
-                  />
+                  <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
+                    <BlockContent
+                      className=""
+                      blocks={singleProjectData.extraBlock1}
+                      projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                      dataset="production"
+                    />
+                  </div>
+                  <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
+                    <BlockContent
+                      className=""
+                      blocks={singleProjectData.extraBlock2}
+                      projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                      dataset="production"
+                    />
+                  </div>
+                  <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
+                    <BlockContent
+                      className=""
+                      blocks={singleProjectData.extraBlock3}
+                      projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                      dataset="production"
+                    />
+                  </div>
+                  <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
+                    <BlockContent
+                      className=""
+                      blocks={singleProjectData.extraBlock4}
+                      projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                      dataset="production"
+                    />
+                  </div>
+                  <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
+                    <BlockContent
+                      className=""
+                      blocks={singleProjectData.extraBlock5}
+                      projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                      dataset="production"
+                    />
+                  </div>
+                  <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
+                    <BlockContent
+                      className=""
+                      blocks={singleProjectData.extraBlock6}
+                      projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                      dataset="production"
+                    />
+                  </div>
                 </div>
-                <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
-                  <BlockContent
-                    className=""
-                    blocks={singleProjectData.extraBlock2}
-                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                    dataset="production"
-                  />
-                </div>
-                <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
-                  <BlockContent
-                    className=""
-                    blocks={singleProjectData.extraBlock3}
-                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                    dataset="production"
-                  />
-                </div>
-                <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
-                  <BlockContent
-                    className=""
-                    blocks={singleProjectData.extraBlock4}
-                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                    dataset="production"
-                  />
-                </div>
-                <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
-                  <BlockContent
-                    className=""
-                    blocks={singleProjectData.extraBlock5}
-                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                    dataset="production"
-                  />
-                </div>
-                <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite font-medium p-6 rounded-[8px] bg-pcWhite/10">
-                  <BlockContent
-                    className=""
-                    blocks={singleProjectData.extraBlock6}
-                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                    dataset="production"
-                  />
-                </div>
-              </div>
               </div>
             </div>
             <div className="flex flex-col mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
