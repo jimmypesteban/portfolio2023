@@ -560,20 +560,31 @@ export default function SingleProject() {
               >
                 {singleProjectData.gifTitle}
               </h1>
-              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+              
+              <div className="prose max-w-none prose-a:text-pcWhite prose-a:font-semibold prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
                 <BlockContent
                   className=""
                   blocks={singleProjectData.gifBlock}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
                 />
-              </div> */}
+              </div>
+
 
               <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Trials Page
               </h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock4}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
                 {singleProjectData &&
                   singleProjectData.gifGallery.map((graphicsgallery, index) => (
                     <a href={graphicsgallery.asset.url} target="_blank">
@@ -587,7 +598,16 @@ export default function SingleProject() {
                 Templates Page
               </h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock5}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery2.map(
                     (graphicsgallery, index) => (
@@ -606,7 +626,16 @@ export default function SingleProject() {
                 User Management Page
               </h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock6}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery3.map(
                     (graphicsgallery, index) => (
@@ -621,11 +650,20 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[28px] mt-6 md:mt-12 mb-4  font-bold text-pcWhite font-pfFont2 text-center">
                 Audit
               </h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock7}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery4.map(
                     (graphicsgallery, index) => (
@@ -661,7 +699,7 @@ export default function SingleProject() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery5.map(
                     (graphicsgallery, index) => (
@@ -689,7 +727,7 @@ export default function SingleProject() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery6.map(
                     (graphicsgallery, index) => (
@@ -709,7 +747,7 @@ export default function SingleProject() {
               </h1>
                       
               <iframe
-                  className="w-full aspect-video"
+                  className="w-full aspect-video mt-4 md:mt-8"
                   src={singleProjectData.extraTitle6}
                 ></iframe>
 
