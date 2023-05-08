@@ -87,7 +87,7 @@ export default function NavBar() {
                 borderRadius: 0,
                 transition: { ease: "linear", duration: 0.3 },
               }}
-              className="absolute w-full bg-pcBlack right-0 h-screen top-0 block md:hidden z-10"
+              className="absolute w-full bg-pcBlack right-0 h-screen top-0 block md:hidden z-40"
             >
               <motion.div
                 initial={{ y: 0, scale: 0, x: -100 }}

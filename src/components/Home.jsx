@@ -261,7 +261,7 @@ export default function Home() {
                   <strong>Multimedia</strong> companies.
                 </p>
                 <div>
-                  <p className="text-[20px] font-pfFont z-50">
+                  <p className="text-[20px] font-pfFont z-0">
                     {authorData.resume !== null && (
                       <a
                         className="font-normal text-pcWhite relative underline duration-300 after:content-[''] after:bg-pcWhite after:h-[2px] after:w-0 after:left-0 after:bottom-[8px] after:absolute after:duration-300 hover:after:w-full hover:no-underline"
