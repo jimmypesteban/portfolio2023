@@ -2554,7 +2554,7 @@ export default function SingleProject() {
               <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
                 <BlockContent
                   className=""
-                  blocks={singleProjectData.designSystem}
+                  blocks={singleProjectData.prototypeBlock}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
                 />
@@ -2598,10 +2598,12 @@ export default function SingleProject() {
                 </a>
               </h1>
 
-              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+              <div className="prose max-w-none prose-a:text-pcWhite prose-a:font-semibold prose-strong:text-pcWhite font-pfFont text-pcWhite mb-4 
+                prose-a:relative prose-a:duration-300 after:prose-a:content-[''] after:prose-a:bg-pcWhite after:prose-a:h-[2px] after:prose-a:w-0 after:prose-a:left-0 after:prose-a:bottom-[8px] after:prose-a:absolute after:prose-a:duration-300 hover:after:prose-a:w-full hover:prose-a:no-underline"
+                >
                 <BlockContent
                   className=""
-                  blocks={singleProjectData.designSystem}
+                  blocks={singleProjectData.extraBlock2}
                   projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                   dataset="production"
                 />
@@ -2640,7 +2642,7 @@ export default function SingleProject() {
               <div className="flex justify-center mt-4">
                 <img
                   className=""
-                  src={singleProjectData.extraImage1.asset.url}
+                  src={singleProjectData.extraImage4.asset.url}
                   alt={singleProjectData.name}
                 />
               </div>
