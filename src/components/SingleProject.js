@@ -891,12 +891,102 @@ export default function SingleProject() {
             </div>
 
             <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
+            <div>
+                <h1
+                  className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
+                  style={{ color: `${singleProjectData.extraColor3}` }}
+                >
+                  Sprints and Testing
+                </h1>
+                <div
+                  className="prose max-w-none prose-a:text-pcWhite prose-a:font-semibold prose-strong:text-pcWhite font-pfFont text-pcWhite mb-4 
+                prose-a:relative prose-a:duration-300 after:prose-a:content-[''] after:prose-a:bg-pcWhite after:prose-a:h-[2px] after:prose-a:w-0 after:prose-a:left-0 after:prose-a:bottom-[8px] after:prose-a:absolute after:prose-a:duration-300 hover:after:prose-a:w-full hover:prose-a:no-underline"
+                >
+                  <BlockContent
+                    className=""
+                    blocks={singleProjectData.gifBlock}
+                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                    dataset="production"
+                  />
+                </div>
+              </div>
+              
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.gifGallery.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              <div>
+                <img
+                  className="mt-4"
+                  src={singleProjectData.extraImage1.asset.url}
+                  alt={singleProjectData.name}
+                />
+              </div>
+
+              <div
+                  className="mt-4 prose max-w-none prose-a:text-pcWhite prose-a:font-semibold prose-strong:text-pcWhite font-pfFont text-pcWhite mb-4 
+                prose-a:relative prose-a:duration-300 after:prose-a:content-[''] after:prose-a:bg-pcWhite after:prose-a:h-[2px] after:prose-a:w-0 after:prose-a:left-0 after:prose-a:bottom-[8px] after:prose-a:absolute after:prose-a:duration-300 hover:after:prose-a:w-full hover:prose-a:no-underline"
+                >
+                  <BlockContent
+                    className=""
+                    blocks={singleProjectData.extraBlock4}
+                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                    dataset="production"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {singleProjectData &&
+                  singleProjectData.extraGallery2.map(
+                    (graphicsgallery, index) => (
+                      <a href={graphicsgallery.asset.url} target="_blank">
+                        {" "}
+                        <img
+                          className="w-full"
+                          src={graphicsgallery.asset.url}
+                        />
+                      </a>
+                    )
+                  )}
+              </div>
+
+              
+
+
+              
+            </div>
+
+            <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1
                 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
                 style={{ color: `${singleProjectData.extraColor3}` }}
               >
                 Prototype/Staging
               </h1>
+
+              <div
+                  className="mt-4 prose max-w-none prose-a:text-pcWhite prose-a:font-semibold prose-strong:text-pcWhite font-pfFont text-pcWhite mb-4 
+                prose-a:relative prose-a:duration-300 after:prose-a:content-[''] after:prose-a:bg-pcWhite after:prose-a:h-[2px] after:prose-a:w-0 after:prose-a:left-0 after:prose-a:bottom-[8px] after:prose-a:absolute after:prose-a:duration-300 hover:after:prose-a:w-full hover:prose-a:no-underline"
+                >
+                  <BlockContent
+                    className=""
+                    blocks={singleProjectData.prototypeBlock}
+                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                    dataset="production"
+                  />
+                </div>
               <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 md:gap-8">
                 <iframe
                   className="w-full aspect-video"
