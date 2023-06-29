@@ -247,6 +247,20 @@ export default function SingleProject() {
         },
         alt 
       },
+      extraGallery7[]{
+        asset->{
+          _id,
+          url
+        },
+        alt 
+      },
+      extraGallery8[]{
+        asset->{
+          _id,
+          url
+        },
+        alt 
+      },
       extraTitle1,
       extraTitle2,
       extraTitle3,
@@ -478,7 +492,7 @@ export default function SingleProject() {
                 />
               </div>
             </div>
-
+     
             <div className="mt-6 lg:mt-12 mb-6 lg:mb-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1
                 className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
@@ -495,7 +509,34 @@ export default function SingleProject() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 gap-4 md:gap-8 pb-8">
+              
+
+              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite mb-4">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock1}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div> */}
+
+<div>
+                <img
+                  className=""
+                  src={singleProjectData.extraImage3.asset.url}
+                  alt={singleProjectData.name}
+                />
+              </div>
+
+              <div>
+                <img
+                  className="pt-8"
+                  src={singleProjectData.extraImage1.asset.url}
+                  alt={singleProjectData.name}
+                />
+              </div>
+
+              <div className="grid grid-cols-1 gap-4 md:gap-8 pt-8">
                 {singleProjectData &&
                   singleProjectData.extraGallery1.map(
                     (graphicsgallery, index) => (
@@ -509,24 +550,9 @@ export default function SingleProject() {
                     )
                   )}
               </div>
-
-              {/* <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite mb-4">
-                <BlockContent
-                  className=""
-                  blocks={singleProjectData.extraBlock1}
-                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
-                  dataset="production"
-                />
-              </div> */}
-
-              <div>
-                <img
-                  className=""
-                  src={singleProjectData.extraImage1.asset.url}
-                  alt={singleProjectData.name}
-                />
-              </div>
             </div>
+
+            
 
             <div className="mt-6 lg:mt-12 mb-6 lg:mb-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1
@@ -552,6 +578,51 @@ export default function SingleProject() {
                 />
               </div>
             </div>
+
+            <div className="mt-6 lg:mt-12 mb-6 lg:mb-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
+              <h1
+                className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2 text-center"
+                style={{ color: `${singleProjectData.extraColor3}` }}
+              >
+                Prototype
+              </h1>
+              
+              <div className="prose max-w-none prose-a:text-pcWhite prose-a:font-semibold prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.extraBlock10}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
+                {singleProjectData &&
+                  singleProjectData.extraGallery7.map((graphicsgallery, index) => (
+                    <a href={graphicsgallery.asset.url} target="_blank">
+                      {" "}
+                      <img className="w-full" src={graphicsgallery.asset.url} />
+                    </a>
+                  ))}
+              </div>
+              </div>
+
+            {/* <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
+              <h1
+                className="md:text-[32px] text-[28px] mb-4 font-bold text-pcWhite font-pfFont2"
+                style={{ color: `${singleProjectData.extraColor3}` }}
+              >
+                {singleProjectData.prototypeTitle}
+              </h1>
+              <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite">
+                <BlockContent
+                  className=""
+                  blocks={singleProjectData.prototypeBlock}
+                  projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                  dataset="production"
+                />
+              </div>
+            </div> */}
 
             <div className="mt-6 lg:mt-12 mb-6 lg:mb-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1
@@ -752,6 +823,8 @@ export default function SingleProject() {
                 ></iframe>
 
             </div>
+
+            
 
             <div className="mt-6 lg:mt-12 p-6 md:p-10 lg:p-16 bg-pcBlack2 rounded-[8px] shadow-[0_0_8px_rgba(255,255,255,0.08)]">
               <h1

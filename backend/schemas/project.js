@@ -514,6 +514,18 @@ export default {
       of: [{ type: "image" }],
     },
     {
+      name: "extraGallery7",
+      title: "Extra Gallery 7",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "extraGallery8",
+      title: "Extra Gallery 8",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
       name: "extraTitle1",
       title: "Extra Title 1",
       type: "string",
