@@ -642,7 +642,7 @@ export default function SingleProject() {
               </div>
 
 
-              <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Trials Page
               </h1>
 
@@ -665,7 +665,7 @@ export default function SingleProject() {
                   ))}
               </div>
 
-              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Templates Page
               </h1>
 
@@ -693,7 +693,7 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 User Management Page
               </h1>
 
@@ -721,7 +721,7 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1 className="text-[28px] mt-6 md:mt-12 mb-4  font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Audit
               </h1>
 
@@ -758,7 +758,7 @@ export default function SingleProject() {
                 {singleProjectData.extraTitle1}
               </h1>
 
-              <h1 className="text-[28px] mt-6 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Dashboard and Calendar Page
               </h1>
               <div className="prose max-w-none prose-strong:text-pcWhite prose-strong:font-pfFont2 font-pfFont text-pcWhite text-center">
@@ -785,7 +785,7 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Messenger Page
               </h1>
 
@@ -813,7 +813,7 @@ export default function SingleProject() {
                   )}
               </div>
 
-              <h1 className="text-[28px] mt-6 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
+              <h1 className="text-[24px] md:text-[28px] mt-4 md:mt-12 mb-4 font-bold text-pcWhite font-pfFont2 text-center">
                 Support / Tickets
               </h1>
                       

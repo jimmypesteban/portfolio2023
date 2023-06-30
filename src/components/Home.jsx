@@ -420,7 +420,7 @@ export default function Home() {
                     <div className="relative">
                       <img
                         alt={projectData.projectHomeBanner.asset.url}
-                        className="w-full object-cover rounded-[8px] mt-8"
+                        className="md:h-full object-cover rounded-[8px] mt-8 h-[620px]"
                         src={projectData.projectHomeBanner.asset.url}
                       />
                       <div className="absolute top-0 w-full md:min-h-[640px] p-6 md:p-12 rounded-[8px]">
@@ -448,11 +448,11 @@ export default function Home() {
                           {projectData.role}
                         </p>
 
-                        <div className="flex flex-wrap mb-3">
+                        <div className="flex flex-wrap mb-0 md:mb-1">
                           {projectData.projectTags &&
                             projectData.projectTags.map((projectTags, id) => (
                               <div
-                                className="md:text-[14px] text-[12px] font-semibold rounded-[24px] px-3 py-1 mr-2 mb-2"
+                                className="md:text-[14px] text-[12px] font-semibold rounded-[24px] px-3 py-1 mr-2 mb-3 md:mb-2"
                                 style={{
                                   backgroundColor: `${projectData.projectTagsColor}`,
                                 }}
@@ -464,7 +464,7 @@ export default function Home() {
                         </div>
 
                         <p
-                          className="md:text-[16px] font-medium font-pfFont mb-5"
+                          className="md:text-[16px] font-medium font-pfFont mb-2 md:mb-5"
                           style={{ color: `${projectData.extraColor2}` }}
                         >
                           {projectData.brief}
