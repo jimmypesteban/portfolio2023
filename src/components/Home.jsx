@@ -257,8 +257,8 @@ export default function Home() {
                 Hello I'm {authorData.name}, a UI/UX Designer
                 <p className="md:text-[24px] text-[20px] px-[24px] mt-4 mb-8 text-center font-medium text-pcGray3 font-pfFont">
                   Worked in startup industries such as <br></br>{" "}
-                  <strong>Fintech</strong>, <strong>IT Consultancy</strong> and{" "}
-                  <strong>Multimedia</strong> companies.
+                  <strong>Fintech</strong>, <strong>Edutech</strong>, <strong>IT Consultancy</strong> and{" "}
+                  <strong>Multimedia</strong> companies. 
                 </p>
                 <div>
                   <p className="text-[20px] font-pfFont z-0">

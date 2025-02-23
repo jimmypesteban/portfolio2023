@@ -70,7 +70,7 @@ export default function Footer() {
       </p>
 
       <p className="text-pcWhite text-[16px] font-regular text-center mb-4">
-        © 2023 Jimmy Esteban
+        © 2025 Jimmy Esteban
       </p>
     </footer>
   );
