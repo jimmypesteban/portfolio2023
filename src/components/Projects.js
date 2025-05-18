@@ -171,7 +171,7 @@ export default function Projects() {
           backgroundImage:`url(https://raw.githubusercontent.com/jimmypesteban/portfolio2023/main/src/images/Grids3.webp)`,
         }}
       >
-      <section className="lg:mx-[320px]">
+      <section className="2xl:mx-[290px] mx-[40px]">
         <h1 className="lg:text-[40px] text-[28px] text-pcWhite font-pfFont2 font-bold text-center mb-2 lg:pt-16">
           Archive
         </h1>
