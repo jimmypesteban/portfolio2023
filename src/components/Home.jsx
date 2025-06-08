@@ -118,7 +118,7 @@ export default function Home() {
 
     sanityClient
       .fetch(
-        `*[_type == "project" && "Homepage" in categories[]->title] | order(_createdAt desc){
+        `*[_type == "project" && "Homepage" in categories[]->title] | order(publishedAt desc){
           "categories": categories[]->title,
           title,
           headline,
@@ -490,7 +490,8 @@ export default function Home() {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              View in Behance
+                              {/* View in Behance */}
+                              View Case Study
                             </a>
                           </motion.button>
                         )}

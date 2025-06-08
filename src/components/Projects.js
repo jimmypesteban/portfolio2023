@@ -210,7 +210,8 @@ export default function Projects() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            View in Behance
+                            {/* View in Behance */}
+                              View Case Study
                           </a>
                         )}
                         {project.liveSite !== null && (
@@ -292,7 +293,8 @@ export default function Projects() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            View in Behance
+                            {/* View in Behance */}
+                              View Case Study
                           </a>
                         )}
                         {project.liveSite !== null && (
